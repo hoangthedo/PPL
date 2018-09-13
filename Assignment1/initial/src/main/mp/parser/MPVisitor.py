@@ -69,6 +69,11 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MPParser#stmtsingle.
+    def visitStmtsingle(self, ctx:MPParser.StmtsingleContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MPParser#matchstmt.
     def visitMatchstmt(self, ctx:MPParser.MatchstmtContext):
         return self.visitChildren(ctx)
