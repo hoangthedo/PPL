@@ -48,9 +48,7 @@ class ParserSuite(unittest.TestCase):
     def test_variable_declaration_207(self):
         input = """Procedure main();
         begin
-            var x:integer;
-                y,x,z:reAl;
-                tem_:array[1 .. 5] of real;
+            temp:array[1 .. 5] of real;
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,207))
@@ -68,41 +66,43 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.test(input,expect,208))
     def test_function_declaration_209(self):
         input = """ 
+        Procedure main();
+        begin
+
+        end
         function abc():real;
         var a:integer;
         begin
             a:=5;
             c:=b--5;
         end
-        Procedure main();
-        begin
-
-        end"""
+        """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,209))
     def test_function_declaration_210(self):
         input = """ 
+        Procedure main();
+        begin
+
+        end
         function abc():array [1 .. 3] of real;
         var a:integer;
-        begin
-        end
-        Procedure main();
         begin
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,210))
     def test_function_declaration_211(self):
         input = """ 
-        function abc():array [1 .. 3] of string;
+        Procedure main();
+        begin
+        end
+        function foo():array [1 .. 3] of real;
         var a,b,c,d:integer;
-            x,y:array [1 .. 3] of string;
         begin
             a:=5;
             c:=b-5;
         end
-        Procedure main();
-        begin
-        end"""
+        """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,211))
     def test_procedure_declaration_212(self):
@@ -113,6 +113,7 @@ class ParserSuite(unittest.TestCase):
             end
         Procedure main();
         begin
+            x,y:array [1 .. 3] of string;
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,212))
@@ -130,6 +131,9 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.test(input,expect,213))
     def test_procedure_declaration_214(self):
         input = """ 
+        Procedure main();
+        begin
+        end
         Procedure abc();
         var a,b,c,d:integer;
             x,y:array [1 .. 3] of string;
@@ -137,9 +141,7 @@ class ParserSuite(unittest.TestCase):
             a:=5;
             c:=b-5;
         end
-        Procedure main();
-        begin
-        end"""
+        """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,214))
     def test_assignment_stat_215(self):
@@ -181,7 +183,7 @@ class ParserSuite(unittest.TestCase):
         begin
             b:= a < b - c > d /f +g;
             a:= n and 10 and b and 5;
-            a:=b:=c:= (abc()+dfc())[1];
+            
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,219))
@@ -189,6 +191,7 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         Procedure main();
         begin
+        	a:=b:=c:= (abc()+dfc())[1];
             if a>b then
              a:=5;
         end"""
@@ -424,8 +427,6 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         Procedure main();
         begin
-            n:=1;
-            S:=0;
             while (n<10) and (s<20) do
             begin
                 S:=S+n;
@@ -438,8 +439,6 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         Procedure main();
         begin
-            n:=1;
-            S:=0;
             while (n<10) and (s<20) do
                 n:=n+1;
         end"""
@@ -449,8 +448,6 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         Procedure main();
         begin
-            n:=10;
-            S:=1;
             for i:=1 to n do
                 S:=S*i;
         end"""
@@ -460,8 +457,6 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         Procedure main();
         begin
-            n:=10;
-            S:=1;
             for i:=1 to n do
             begin
                 S:=S*i;
@@ -475,8 +470,6 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         Procedure main();
         begin
-            n:=10;
-            S:=1;
             for i:=n downto i do
             begin
                 S:=S*i;
@@ -490,8 +483,6 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         Procedure main();
         begin
-            n:=-10;
-            S:=1;
             for i:=n downto i do
             begin
                 S:=S*i;

@@ -186,7 +186,7 @@ BLOCK: LP .*? RP -> skip;
 LINE: '//' ~[\r\n]*-> skip;
 
 //Operator
-ASSIOP: ':' [ ]* '=';
+ASSIOP: ':=';
 
 ADDOP: '+';
 
