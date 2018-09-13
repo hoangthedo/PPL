@@ -1,0 +1,7 @@
+ 
+        function test() : Integer;
+            begin
+            n:= function1(function2(),aff[25],c+a);
+            return func(func());
+            end
+        

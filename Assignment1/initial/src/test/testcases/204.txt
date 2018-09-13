@@ -1,0 +1,4 @@
+Procedure main();
+        begin
+            var x:real;
+        end

@@ -1,0 +1,5 @@
+Procedure main();
+        begin
+            var x:integer;
+                tem_:array[1 .. 5] of integer;
+        end

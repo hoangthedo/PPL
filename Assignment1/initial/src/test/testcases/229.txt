@@ -1,0 +1,5 @@
+ 
+        Procedure main();
+        begin
+            n:= a - b or c and d;
+        end

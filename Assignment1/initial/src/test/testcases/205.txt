@@ -1,0 +1,5 @@
+Procedure main();
+        begin
+            var x:REal;
+                y,x,z:Integer;
+        end

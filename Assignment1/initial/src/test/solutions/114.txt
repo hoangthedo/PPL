@@ -1,0 +1,1 @@
+Unclosed String: when the lexer detects an unterminated string

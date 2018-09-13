@@ -1,0 +1,4 @@
+PRocedure main();
+         begin
+         a := -12;
+         end

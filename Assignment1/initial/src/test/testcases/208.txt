@@ -1,0 +1,9 @@
+ 
+        function abc():integer;
+        var a:integer;
+        begin
+        end
+        Procedure main();
+        begin
+
+        end

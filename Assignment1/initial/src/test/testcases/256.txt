@@ -1,0 +1,6 @@
+ 
+        function test() : Integer;
+            n:= function1(function2(),aff[25],c+a);
+            begin
+            end
+        
