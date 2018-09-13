@@ -609,3 +609,179 @@ class ParserSuite(unittest.TestCase):
         """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,257))
+    def test_call_function_258(self):
+        input = """ 
+        function test() : Integer;
+            n:= function1(function2(),aff[25],c+a);
+            begin
+            	while n > 3 do begin
+            	end
+            end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,258))
+    def test_call_function_259(self):
+        input = """ 
+        function test() : Integer;
+            begin
+            	while n > 3 do begin
+            		with n <5; do begin
+            		end
+            	end
+            end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,259))
+    def test_call_function_260(self):
+        input = """ 
+        function test() : Integer;
+            return fun(a[4]);
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,260))
+    def test_call_function_260(self):
+        input = """ 
+        function test() : Integer;
+        begin
+        	break;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,260))
+    def test_call_function_261(self):
+        input = """ 
+        function test() : Integer;
+        begin
+        	countinue;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,261))
+    def test_call_function_262(self):
+        input = """ 
+        function test() : Integer;
+        begin
+        	for a := 0 to  10 do 
+        		n := 5;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,262))
+    def test_call_function_263(self):
+        input = """ 
+        function test() : Integer;
+        begin
+        	for a := 0 to  10 do 
+        		n := -5;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,263))
+    def test_call_function_264(self):
+        input = """ 
+        function test() : Integer;
+        begin
+        	for a := 0 to  10 do 
+        		n := --5;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,264))
+    def test_call_function_265(self):
+        input = """ 
+        function test() : Integer;
+        begin
+        	for a := 0 to  10 do 
+        		begin
+        			n := fun()[3];
+        		end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,265))
+    def test_call_function_266(self):
+        input = """ 
+        function test() : Integer;
+        begin
+        	for a := 0 to  10 do 
+        		begin
+        			fun()[4] := -5;
+        			break;
+        		end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,266))
+    def test_call_function_267(self):
+        input = """ 
+        function test() : Integer;
+        begin
+        	for a := 0 to  10 do 
+        		begin
+        			fun()[4] := -5;
+        			{ PPL }
+        		end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,267))
+    def test_call_function_268(self):
+        input = """ 
+        var a,b,c,d : boolean;
+        procdure main(); begin
+        	var a,b,c : integer;
+        	for f := 0 to 10 do begin
+        		var k = 0;
+        		if f > 5 then
+        			k = f*f;
+        	end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,268))
+    def test_call_function_269(self):
+        input = """ 
+        var a,b,c,d : boolean;
+        procdure main(); begin
+        	
+        end
+        function foo() begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,269))
+    def test_call_function_270(self):
+        input = """ 
+        var a,b,c,d : boolean;
+        procdure main(); begin
+        	
+        end
+        function foo() begin
+        end
+
+        function a() begin
+        end
+
+        var a: integer;
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,270))
+    def test_call_function_271(self):
+        input = """ 
+        var a,b,c,d : boolean;
+        procdure main(); begin
+        	
+        end
+        function foo() begin
+        end
+
+        function a() begin
+        end
+
+        var a: integer;
+
+        procdure main(); begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,271))
