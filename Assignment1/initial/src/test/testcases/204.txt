@@ -1,4 +1,6 @@
-Procedure main();
+
+        var x:integer;
+        Procedure main();
         begin
-            var x:real;
+           
         end

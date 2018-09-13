@@ -1,9 +1,9 @@
  
-        function abc():real;
+        function abc():integer;
         var a:integer;
         begin
             a:=5;
-            c:=b--5;
+            c:=b-5;
         end
         Procedure main();
         begin

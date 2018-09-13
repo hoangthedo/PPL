@@ -24,7 +24,7 @@ vartype: vartypebasic | ARRAY paramarr OF vartypebasic ;
 paramarr: LSB exp DOUDOT exp RSB;
 vartypebasic: INTEGER | STRING | REAL | BOOLEAN;
 
-funcdec: FUNCTION (ID|MAIN) LB paramlist? RB COLON returntype SEMI vardec* compoundstmt?;
+funcdec: FUNCTION ID LB paramlist? RB COLON returntype SEMI vardec* compoundstmt?;
 paramlist: (paramsingle + SEMI)* paramsingle;
 paramsingle: ID (COMMA ID)* COLON vartype; 
 returntype: vartype;
@@ -33,7 +33,8 @@ returntype: vartype;
 
 stmt: (matchstmt| unmatchstmt)*;
 stmtsingle: matchstmt| unmatchstmt;
-matchstmt: IF exp THEN matchstmt ELSE matchstmt| ortherstmt;
+matchstmt: IF exp THEN (matchstmt|compoundstmt) ELSE (matchstmt| compoundstmt)
+            | ortherstmt;
 
 ortherstmt: assignstmt 
             | forstmt 
@@ -42,14 +43,14 @@ ortherstmt: assignstmt
             | continuestmt 
             | returnstmt 
             | funcall 
-            | withstmt 
-            | vardec;
+            | withstmt;
 
-unmatchstmt: IF exp THEN (stmt | matchstmt ELSE unmatchstmt);
+unmatchstmt: IF exp THEN ((stmt|compoundstmt) | (matchstmt|compoundstmt) ELSE (unmatchstmt|compoundstmt));
 
-assignstmt: ID (ASSIOP assignlist)+ SEMI;
+assignstmt: (ID|arrayvar) (ASSIOP assignlist)+ SEMI;
 assignlist: exp ;
 arrayvar: indexexp | ID LSB exp RSB| LB exp RB LSB exp RSB;
+indexexp: ID LB calllist? RB (LSB returnbody RSB)?;
 
 ifstmt: IF exp THEN ifbody (ELSE ifbody)? ;
 ifbody: exp | stmtsingle | compoundstmt?;
@@ -74,10 +75,10 @@ withstmt: WITH paramlist? SEMI DO (stmtsingle| compoundstmt);
 funcall: ID LB calllist? RB (LSB returnbody RSB)? SEMI;
 calllist: exp (COMMA exp)*;
 
-indexexp: ID LB calllist? RB (LSB returnbody RSB)?;
 
-procdec: procmain | procbasic;
-procmain: PROCEDURE MAIN LB paramlist? RB SEMI vardec* compoundstmt;
+
+procdec: procbasic;//procmain | procbasic;
+//procmain: PROCEDURE MAIN LB paramlist? RB SEMI vardec* compoundstmt;
 procbasic: PROCEDURE ID LB paramlist? RB SEMI vardec* compoundstmt?; 
 
 
@@ -148,7 +149,7 @@ DO: Cd Co;
 
 WHILE: Cw Ch Ci Cl Ce;
 
-MAIN: Cm Ca Ci Cn   ;
+//MAIN: Cm Ca Ci Cn   ;
 
 STRING:  Cs Ct Cr Ci Cn Cg;
 
@@ -291,7 +292,7 @@ ILLEGAL_ESCAPE
     ;
 
 UNCLOSE_STRING
-    :  '"' ('\\' [bfrnt'"\\] | ~["\r\n] |((~'\\')'\\"'))* ('\n'| EOF)
+    :  '"' ('\\' [bfrnt'"\\] | ~["\r\n] |('\n'| EOF))
         {
             if self.text[-1]=='\n':
                  raise UncloseString(self.text[1:-1])

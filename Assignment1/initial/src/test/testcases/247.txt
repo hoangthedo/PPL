@@ -1,6 +1,7 @@
- 
-        Procedure main();
-        begin
-            with a:integer;b : array [1 .. 2] of real; do
+Procedure main();begin
+            
+
+            while 1<2 do begin
+            end
                 b := c[a]+b;
         end

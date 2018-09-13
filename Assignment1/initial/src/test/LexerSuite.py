@@ -192,7 +192,7 @@ class LexerSuite(unittest.TestCase):
     def test_identifier193(self):
         self.assertTrue(TestLexer.test("BOolean","BOolean,<EOF>",193))
     def test_identifier194(self):
-        self.assertTrue(TestLexer.test("STRing","STRIng,<EOF>",194))
+        self.assertTrue(TestLexer.test("STRing","STRing,<EOF>",194))
     def test_identifier195(self):
         self.assertTrue(TestLexer.test("String","String,<EOF>",195))
     def test_identifier196(self):

@@ -2,7 +2,7 @@
         Procedure main();
         begin
             n:= not (not a);
-            n:= not not a;
-            m: = - (-c);
-            m:= --c;
+            //n:= not not a
+            m:= - (-c);
+            //m:= --c;
         end

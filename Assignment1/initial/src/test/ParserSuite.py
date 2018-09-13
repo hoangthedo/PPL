@@ -736,7 +736,7 @@ class ParserSuite(unittest.TestCase):
         procdure main(); begin
         	
         end
-        function foo() begin
+        function foo(): integer; begin
         end
         """
         expect = "successful"
@@ -747,10 +747,10 @@ class ParserSuite(unittest.TestCase):
         procdure main(); begin
         	
         end
-        function foo() begin
+        function foo(): integer; begin
         end
 
-        function a() begin
+        function a(): integer; begin
         end
 
         var a: integer;
@@ -763,16 +763,223 @@ class ParserSuite(unittest.TestCase):
         procdure main(); begin
         	
         end
-        function foo() begin
+        function foo(): integer; begin
         end
 
-        function a() begin
+        function a(): integer; begin
         end
 
         var a: integer;
-
-        procdure main(); begin
-        end
         """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,271))
+    def test_call_function_272(self):
+        input = """ 
+        procdure main(); begin
+        	if (112> z) then 
+        		a:= f;
+        end
+        function foo(): integer; begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,272))
+    def test_call_function_273(self):
+        input = """ 
+        procdure main(); begin
+        	if (112> z) and (123 > a) then 
+        		a:= f;
+        end
+        function foo(): integer; begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,273))
+    def test_call_function_274(self):
+        input = """ 
+        procdure main(); begin
+        	if ((112> z) and (123 > a)) then 
+        		a:= f;
+        end
+        function foo(): integer; begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,274))
+    def test_call_function_274(self):
+        input = """ 
+        procdure main(); begin
+        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
+        		a:= f;
+        end
+        function foo(): integer; begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,274))
+    def test_call_function_275(self):
+        input = """ 
+        procdure main(); begin
+        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
+        		a[asd[foo()[]]]:= f;
+        end
+        function foo(): integer; begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,275))
+    def test_call_function_275(self):
+        input = """ 
+        function ID (a,c,d:integer): integer;
+        begin
+        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
+        		a[asd[foo()[]]]:= f;
+        end
+        function foo(): integer; begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,275))
+    def test_call_function_276(self):
+        input = """ 
+        function ID (a,c,d:integer): integer;
+        begin
+        	if (a) then 
+        		a[asd[foo()[]]]:= f;
+        end
+        function foo(): integer; begin
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,276))
+    def test_call_function_277(self):
+        input = """
+        function foo(): integer; begin
+        g:= 1+2+-2;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,277))
+    def test_call_function_278(self):
+        input = """
+        function foo(): integer; begin
+        g:= 1+(2+-2);
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,278))
+    def test_call_function_279(self):
+        input = """
+        function foo(): integer; begin
+        g:= 1+(2+-2) / (19 + 26);
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,279))
+    def test_call_function_280(self):
+        input = """
+        function foo(): integer; begin
+        g:= 1+(2+-2) / (19 + 26) * ((1/-2) + 5/6);
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,280))
+    def test_call_function_281(self):
+        input = """
+        function foo(): integer; begin
+        g:= 1+(2+-2) / (19 + 26) * ((1/-2) + 5/6);
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,281))
+    def test_call_function_282(self):
+        input = """
+        function foo(): integer; begin
+        g:= 1+(2+-2) / (19 + 26) * ((1/-2) + 5/6);
+        a:=t[1+foo()[2]+ foo()];
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,282))
+    def test_call_function_282(self):
+        input = """
+        function foo(): integer; begin
+        g:= 1+(2+-2) / (19 + 26) * ((1/-2) + 5/6);
+        a:=t[1+foo()[2]+ foo()];
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,282))
+    def test_call_function_283(self):
+        input = """
+        procedure main(m:integer);
+        var y : array[1 .. 10] of string;
+        begin
+            putIntLn(sum(m,b,k));   
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,283))
+    def test_call_function_284(self):
+        input = """
+        procedure main(m:integer);
+        var y : array[1 .. 20] of string;
+        begin
+            putIntLn(sum(m,b,k));   
+         end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,284))
+    def test_call_function_285(self):
+        input = """
+        procedure main(m:integer);
+        var y : array[1 .. 32] of string;
+        begin
+            foo("ds","as")[3] := a[foo(2)[3]] + -3;        
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,285))
+    def test_call_function_286(self):
+        input = """
+        procedure main(m:integer);
+        var y : array[1 .. 49] of string;
+        begin
+        	if(a>(b*m)) then
+        		if(a>(b*m)) then
+        			begin
+        			end
+                                                        
+            while s = a do
+                m:=2;                     
+         end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,286))
+    def test_call_function_287(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            foo[3] := a[foo(2)[3]] + -3;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,287))
+    def test_call_function_288(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            foo()[] := 5 +as/2;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,288))
+    def test_call_function_289(self):
+        input = """
+        procedure main(m:integer);
+         begin
+                 foo()[] := 5 +as/2;
+           end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,289))

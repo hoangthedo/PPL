@@ -104,6 +104,11 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MPParser#indexexp.
+    def visitIndexexp(self, ctx:MPParser.IndexexpContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MPParser#ifstmt.
     def visitIfstmt(self, ctx:MPParser.IfstmtContext):
         return self.visitChildren(ctx)
@@ -174,18 +179,8 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#indexexp.
-    def visitIndexexp(self, ctx:MPParser.IndexexpContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MPParser#procdec.
     def visitProcdec(self, ctx:MPParser.ProcdecContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#procmain.
-    def visitProcmain(self, ctx:MPParser.ProcmainContext):
         return self.visitChildren(ctx)
 
 

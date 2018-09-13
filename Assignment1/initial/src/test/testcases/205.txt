@@ -1,5 +1,7 @@
-Procedure main();
+
+        var x:integer;
+            y,x,z:Integer;
+        Procedure main();
         begin
-            var x:REal;
-                y,x,z:Integer;
+
         end

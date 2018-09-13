@@ -1,5 +1,25 @@
  
-        function test() : Integer;
-            n:= function1(function2(),aff[25],c+a);
-            return n;
+        var i:integer;
+        function f():integer;
+        begin
+            return 200;
+        end
+        procedure main();
+        var main_:integer;
+        begin
+            main:=f();
+            putIntLn(main );
+            with
+                i : integer ;
+                main : integer ;
+                f : integer ;
+            do begin
+                main := f := i := 100;
+                putIntLn( i );
+                putIntLn(main );
+                putIntLn( f );
+            end
+            putIntLn(main );
+        end
+        var g : real ;
         
