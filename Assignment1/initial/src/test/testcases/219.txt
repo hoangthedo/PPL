@@ -1,6 +1,7 @@
  
         Procedure main();
         begin
-            //a:= n<10 and b>5;
-            //a:=b:=c:= (abc()+dfc())[1];
+            b:= a < b - c > d /f +g;
+            a:= n and 10 and b and 5;
+            
         end

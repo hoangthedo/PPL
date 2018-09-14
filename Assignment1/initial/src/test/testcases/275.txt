@@ -1,11 +1,9 @@
-
-        Function kt(n:integer):boolean;
-        var i,d:integer;
+ 
+        function ID (a,c,d:integer): integer;
         begin
-            kt:=false;
-            d:=0;
-            For i:=1 to n do
-                if n mod i=0 then inc(d);
-            if d=2 then kt:=true;
+        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
+        		a[asd[foo()[]]]:= f;
+        end
+        function foo(): integer; begin
         end
         

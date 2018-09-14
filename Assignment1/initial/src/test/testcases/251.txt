@@ -1,25 +1,7 @@
  
-        var i:integer;
-        function f():integer;
+        function test() : Integer;
         begin
-            return 200;
+            n:= function1(function2(),aff[25],c+a);
+            return n;
         end
-        procedure main();
-        var main_:integer;
-        begin
-            main:=f();
-            putIntLn(main );
-            with
-                i : integer ;
-                main : integer ;
-                f : integer ;
-            do begin
-                main := f := i := 100;
-                putIntLn( i );
-                putIntLn(main );
-                putIntLn( f );
-            end
-            putIntLn(main );
-        end
-        var g : real ;
         

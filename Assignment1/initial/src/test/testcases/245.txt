@@ -1,12 +1,10 @@
  
         Procedure main();
         begin
-            n:=10;
-            S:=1;
             for i:=n downto i do
             begin
                 S:=S*i;
                 if(S>20) then
-                    break;
+                    continue;
             end
         end

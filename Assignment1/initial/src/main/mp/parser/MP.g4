@@ -24,7 +24,7 @@ vartype: vartypebasic | ARRAY paramarr OF vartypebasic ;
 paramarr: LSB exp DOUDOT exp RSB;
 vartypebasic: INTEGER | STRING | REAL | BOOLEAN;
 
-funcdec: FUNCTION ID LB paramlist? RB COLON returntype SEMI vardec* compoundstmt?;
+funcdec: FUNCTION (ID|MAIN) LB paramlist? RB COLON returntype SEMI vardec* compoundstmt;
 paramlist: (paramsingle + SEMI)* paramsingle;
 paramsingle: ID (COMMA ID)* COLON vartype; 
 returntype: vartype;
@@ -47,10 +47,10 @@ ortherstmt: assignstmt
 
 unmatchstmt: IF exp THEN ((stmt|compoundstmt) | (matchstmt|compoundstmt) ELSE (unmatchstmt|compoundstmt));
 
-assignstmt: (ID|arrayvar) (ASSIOP assignlist)+ SEMI;
+assignstmt: (ID|arrayvar|indexexp) (ASSIOP assignlist)+ SEMI;
 assignlist: exp ;
 arrayvar: indexexp | ID LSB exp RSB| LB exp RB LSB exp RSB;
-indexexp: ID LB calllist? RB (LSB returnbody RSB)?;
+indexexp: ID LB calllist? RB (LSB returnbody? RSB)?;
 
 ifstmt: IF exp THEN ifbody (ELSE ifbody)? ;
 ifbody: exp | stmtsingle | compoundstmt?;
@@ -77,9 +77,9 @@ calllist: exp (COMMA exp)*;
 
 
 
-procdec: procbasic;//procmain | procbasic;
-//procmain: PROCEDURE MAIN LB paramlist? RB SEMI vardec* compoundstmt;
-procbasic: PROCEDURE ID LB paramlist? RB SEMI vardec* compoundstmt?; 
+procdec: procmain | procbasic;
+procmain: PROCEDURE MAIN LB paramlist? RB SEMI vardec* compoundstmt;
+procbasic: PROCEDURE ID LB paramlist? RB SEMI vardec* compoundstmt; 
 
 
 
@@ -149,7 +149,7 @@ DO: Cd Co;
 
 WHILE: Cw Ch Ci Cl Ce;
 
-//MAIN: Cm Ca Ci Cn   ;
+MAIN: Cm Ca Ci Cn   ;
 
 STRING:  Cs Ct Cr Ci Cn Cg;
 

@@ -1,6 +1,5 @@
  
         Procedure main();
         begin
-            n:= fucntion1(a,b,c);
+            n:= function1(a,b,c);
         end
-        

@@ -1,7 +1,6 @@
-
-        var x:integer;
-            y,x,z:Integer;
-            tem_:array[1 .. 5] of integer;
-        Procedure main();begin
-
+Procedure main();
+        begin
+            
         end
+        var x:integer;
+            tem_:array[1 .. 5] of integer;

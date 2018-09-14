@@ -1,12 +1,7 @@
 
-        procedure main();
-        Var a,b,x:real;
-        Begin
-        putIntLn("Nhap a: ");readln(a);
-        putIntLn("Nhap a: "); 
-        If(a=0) then
-        If(b=0) then putIntLn("phuong trinh co vo so nghiem "); Else 
-        putIntLn("phuong trinh vo nghiem ");
-        Else
-        Writeln("Phuong trinh co nghiem x=",-b/a); 
-        End
+        procedure main(m:integer);
+        var y : array[1 .. 20] of string;
+        begin
+            putIntLn(sum(m,b,k));   
+         end
+        

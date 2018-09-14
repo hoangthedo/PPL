@@ -1,15 +1,19 @@
 
-        procedure main();
-        var tcha,tcon,nam,kq:string;
+        procedure main(m:integer);
         begin
-            write("nhap tuoi con");
-            readln(tcon);
-            write();readln(tcha);
-            while tcha<>2*tcon do
+        with a,b:integer ; do begin
+            if a < b then
             begin
-                nam:=nam+1;
-                tcon:=tcon+1;
-                tcha:=tcha+1;
+                while a < 4 do 
+                begin
+                    if 3 < a then 
+                    	a:=5;
+                    else
+                    	a:=6;
+                end
             end
+            else
+                b:=a;
+        end
         end
         

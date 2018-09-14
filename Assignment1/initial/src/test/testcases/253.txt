@@ -1,8 +1,8 @@
-
-        Procedure main();
-        var a,b,c,x,y,z:integer;
+ 
+        function test() : Integer;
         begin
-            if(y<5)and(z<10)then
-            begin
-            end
+            n:= function1(function2(),aff[25],c+a);
+            return func(a);
         end
+        var x: integer;
+        

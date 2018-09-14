@@ -1,5 +1,6 @@
-
-        Procedure main();
+ 
+        function test() : Integer;
         begin
-            putIntLn("Hello Word!!!");
+            return fun(a[4]);
         end
+        

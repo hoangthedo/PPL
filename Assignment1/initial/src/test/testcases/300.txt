@@ -1,11 +1,7 @@
 
-        Function kt(n:integer):boolean;
-        var i,d:integer;
+        procedure main(m:integer);
         begin
-            kt:=false;
-            d:=0;
-            For i:=1 to n do
-                if n mod i=0 then inc(d);
-            if d=2 then kt:=true;
+            if 3 < a then 
+                a:=5;
         end
         

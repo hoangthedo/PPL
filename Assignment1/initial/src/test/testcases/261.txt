@@ -1,15 +1,6 @@
-
-        function giaithua(n:integer):integer;
-        var gt:integer;
+ 
+        function test() : Integer;
         begin
-            gt:=1;
-            for i:=1 to n do
-            begin
-                gt:= gt*i;
-            end
-            return gt;
+        	continue;
         end
-        Procedure main();
-        begin
-            putIntLn(giaithua(5));
-        end
+        

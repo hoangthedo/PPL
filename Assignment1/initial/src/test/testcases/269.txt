@@ -1,9 +1,8 @@
-
-        function sum_2_int(a,b:integer):integer;
-        begin
-            return a+b;
+ 
+        var a,b,c,d : boolean;
+        procedure main(); begin
+        	
         end
-        Procedure main();
-        begin
-            putIntLn(sum_2_int(1,2));
+        function foo(): integer; begin
         end
+        

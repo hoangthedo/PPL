@@ -1,5 +1,9 @@
-
-        Procedure main();
-        begin
-            putIntLn("Hello Word!!!");
-        end
+ 
+        function test() : Integer;
+            begin
+            	while n > 3 do begin
+            		with n:integer; do begin
+            		end
+            	end
+            end
+        

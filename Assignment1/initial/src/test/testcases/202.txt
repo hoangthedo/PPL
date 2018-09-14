@@ -1,1 +1,3 @@
-PROCEDURE main (); begin end
+PROCEDURE main (); 
+        begin
+        end

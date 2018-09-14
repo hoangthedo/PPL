@@ -1,9 +1,7 @@
 
-        function factorial(n:integer):integer;
-        var i:integer;
-            prod:integer;
+        procedure main(m:integer);
+        var y : array[1 .. 32] of string;
         begin
-            prod:=1;
-            for i:=1 to n do prod:=prod*i*i*i*i*i;
-            factorial:=prod;
+            foo("ds","as")[3] := a[foo(2)[3]] + -3;        
         end
+        

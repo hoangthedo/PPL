@@ -1,13 +1,6 @@
-
-        var x:integer;
-        var y:real;
-        function increase(x:integer):integer;
-        begin
-            return x+1;
-        end
-        Procedure main();
-        var a,b:integer;
-        begin
-            putIntLn(increase(x));
-            putIntLn(increase(y));
-        end
+ 
+        function test() : Integer;
+        begin    n:= function1(function2(),aff[25],c+a);
+            
+            end
+        

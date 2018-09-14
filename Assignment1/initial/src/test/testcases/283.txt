@@ -1,9 +1,7 @@
 
-        procedure main();
-        var sum,i:integer;
+        procedure main(m:integer);
+        var y : array[1 .. 10] of string;
         begin
-            sum:=0;
-            for i:=1 to 10 do sum:=sum+i;
-            writeln(sum);
+            putIntLn(sum(m,b,k));   
         end
         

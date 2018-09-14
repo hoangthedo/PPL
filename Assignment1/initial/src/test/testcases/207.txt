@@ -1,8 +1,5 @@
-
-        var x:integer;
-            y,x,z:reAl;
-            tem_:array[1 .. 5] of integer;
-        Procedure main();
+Procedure main();
+        var temp:array[1 .. 5] of real;
         begin
-
+            
         end

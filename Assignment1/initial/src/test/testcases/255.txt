@@ -1,14 +1,7 @@
-
-        var x:integer;
-        var y:real;
-        Procedure main();
-        var a,b:integer;
-        begin
-            if(y<5)and(y<10)then
+ 
+        function test() : Integer;
             begin
-                x:=a;
-                y:=b;
-                putIntLn( x );
-                putIntLn( y );
+            n:= function1(function2(),aff[25],c+a);
+            return func(func());
             end
-        end
+        

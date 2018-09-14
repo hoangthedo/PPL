@@ -184,6 +184,11 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MPParser#procmain.
+    def visitProcmain(self, ctx:MPParser.ProcmainContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MPParser#procbasic.
     def visitProcbasic(self, ctx:MPParser.ProcbasicContext):
         return self.visitChildren(ctx)

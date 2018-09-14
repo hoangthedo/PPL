@@ -25,30 +25,34 @@ class ParserSuite(unittest.TestCase):
     def test_variable_declaration_204(self):
         input = """Procedure main();
         begin
-            var x:real;
-        end"""
+            
+        end
+        var x:real;"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,204))
     def test_variable_declaration_205(self):
         input = """Procedure main();
-        begin
-            var x:REal;
+        var x:REal;
                 y,x,z:Integer;
+        begin
+            
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,205))
     def test_variable_declaration_206(self):
         input = """Procedure main();
         begin
-            var x:integer;
-                tem_:array[1 .. 5] of integer;
-        end"""
+            
+        end
+        var x:integer;
+            tem_:array[1 .. 5] of integer;"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,206))
     def test_variable_declaration_207(self):
         input = """Procedure main();
+        var temp:array[1 .. 5] of real;
         begin
-            temp:array[1 .. 5] of real;
+            
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,207))
@@ -112,8 +116,9 @@ class ParserSuite(unittest.TestCase):
             begin
             end
         Procedure main();
+        var x,y:array [1 .. 3] of string;
         begin
-            x,y:array [1 .. 3] of string;
+            
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,212))
@@ -335,7 +340,7 @@ class ParserSuite(unittest.TestCase):
         begin
             n:= not (not a);
             n:= not not a;
-            m: = - (-c);
+            m:= - (-c);
             m:= --c;
         end"""
         expect = "successful"
@@ -535,40 +540,41 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_251(self):
         input = """ 
         function test() : Integer;
+        begin
             n:= function1(function2(),aff[25],c+a);
             return n;
+        end
         """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,251))   
     def test_call_function_252(self):
         input = """ 
         function test() : Integer;
+        begin
             n:= function1(function2(),aff[25],c+a);
             return a +1 +3 +5;
+        end
         """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,252)) 
     def test_call_function_253(self):
         input = """ 
         function test() : Integer;
+        begin
             n:= function1(function2(),aff[25],c+a);
             return func(a);
+        end
+        var x: integer;
         """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,253))
     def test_call_function_254(self):
         input = """ 
         function test() : Integer;
+        begin
             n:= function1(function2(),aff[25],c+a);
             return func(func());
-        """
-        expect = "successful"
-        self.assertTrue(TestParser.test(input,expect,254))
-    def test_call_function_254(self):
-        input = """ 
-        function test() : Integer;
-            n:= function1(function2(),aff[25],c+a);
-            return func(func());
+        end
         """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,254))
@@ -585,8 +591,8 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_256(self):
         input = """ 
         function test() : Integer;
-            n:= function1(function2(),aff[25],c+a);
-            begin
+        begin    n:= function1(function2(),aff[25],c+a);
+            
             end
         """
         expect = "successful"
@@ -594,8 +600,9 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_257(self):
         input = """ 
         function test() : Integer;
-            n:= function1(function2(),aff[25],c+a);
+            
             begin
+            	n:= function1(function2(),aff[25],c+a);
             end
         """
         expect = "successful"
@@ -603,8 +610,9 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_258(self):
         input = """ 
         function test() : Integer;
-            n:= function1(function2(),aff[25],c+a);
+            
             begin
+            	n:= function1(function2(),aff[25],c+a);
             	while n > 3 do begin
             	end
             end
@@ -616,7 +624,7 @@ class ParserSuite(unittest.TestCase):
         function test() : Integer;
             begin
             	while n > 3 do begin
-            		with n <5; do begin
+            		with n:integer; do begin
             		end
             	end
             end
@@ -626,15 +634,8 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_260(self):
         input = """ 
         function test() : Integer;
-            return fun(a[4]);
-        """
-        expect = "successful"
-        self.assertTrue(TestParser.test(input,expect,260))
-    def test_call_function_260(self):
-        input = """ 
-        function test() : Integer;
         begin
-        	break;
+            return fun(a[4]);
         end
         """
         expect = "successful"
@@ -643,7 +644,7 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         function test() : Integer;
         begin
-        	countinue;
+        	continue;
         end
         """
         expect = "successful"
@@ -719,12 +720,11 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_268(self):
         input = """ 
         var a,b,c,d : boolean;
-        procdure main(); begin
-        	var a,b,c : integer;
+        	a,b,c : integer;
+        procedure main(); begin
         	for f := 0 to 10 do begin
-        		var k = 0;
         		if f > 5 then
-        			k = f*f;
+        			k := f*f;
         	end
         end
         """
@@ -733,7 +733,7 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_269(self):
         input = """ 
         var a,b,c,d : boolean;
-        procdure main(); begin
+        procedure main(); begin
         	
         end
         function foo(): integer; begin
@@ -744,7 +744,7 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_270(self):
         input = """ 
         var a,b,c,d : boolean;
-        procdure main(); begin
+        procedure main(); begin
         	
         end
         function foo(): integer; begin
@@ -760,7 +760,7 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_271(self):
         input = """ 
         var a,b,c,d : boolean;
-        procdure main(); begin
+        procedure main(); begin
         	
         end
         function foo(): integer; begin
@@ -775,7 +775,7 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.test(input,expect,271))
     def test_call_function_272(self):
         input = """ 
-        procdure main(); begin
+        procedure main(); begin
         	if (112> z) then 
         		a:= f;
         end
@@ -786,7 +786,7 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.test(input,expect,272))
     def test_call_function_273(self):
         input = """ 
-        procdure main(); begin
+        procedure main(); begin
         	if (112> z) and (123 > a) then 
         		a:= f;
         end
@@ -797,7 +797,7 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.test(input,expect,273))
     def test_call_function_274(self):
         input = """ 
-        procdure main(); begin
+        procedure main(); begin
         	if ((112> z) and (123 > a)) then 
         		a:= f;
         end
@@ -808,7 +808,7 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.test(input,expect,274))
     def test_call_function_274(self):
         input = """ 
-        procdure main(); begin
+        procedure main(); begin
         	if ((112> z[3]) and (123 > a[foo()[9]])) then 
         		a:= f;
         end
@@ -969,7 +969,7 @@ class ParserSuite(unittest.TestCase):
         input = """
         procedure main(m:integer);
         begin
-            foo()[] := 5 +as/2;
+            foo()[4] := 5 +as/2;
         end
         """
         expect = "successful"
@@ -977,9 +977,294 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_289(self):
         input = """
         procedure main(m:integer);
-         begin
-                 foo()[] := 5 +as/2;
-           end
+        begin
+            foo()[2] := foo[2];
+        end
         """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,289))
+    def test_call_function_290(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            if a>b then
+                if a>5 then
+                begin
+                    a:=b;
+                    if a>b then
+                    	a := 5;
+                end
+                else
+                begin
+                    if a>3 then
+                        a:=3;
+                    else
+                        a:=3;
+                    with a,b:integer; do begin
+                    end
+                end
+            else
+                b:=a;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,290))
+    def test_call_function_291(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            if a>b then
+                if a>5 then
+                begin
+                    a:=b;
+                    if a>b then
+                    	a := 5;
+                end
+                else
+                begin
+                    if a>3 then
+                        a:=3;
+                    else
+                        a:=3;
+                    with a,b:integer; do begin
+                    	if a < b then
+                    		a := c;
+                    end
+                end
+            else
+                b:=a;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,291))
+    def test_call_function_291(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            if a>b then
+                if a>5 then
+                begin
+                    a:=b;
+                    if a>b then
+                    	a := 5;
+                end
+                else
+                begin
+                    if a>3 then
+                        a:=3;
+                    else
+                        a:=3;
+                    with a,b:integer; do begin
+                    	if a < b then
+                    	begin
+                    		while a < 4 do 
+                    			a:= 5;
+                    	end
+                    end
+                end
+            else
+                b:=a;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,291))
+    def test_call_function_292(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            if a>b then
+                if a>5 then
+                begin
+                    a:=b;
+                    if a>b then
+                    	a := 5;
+                end
+                else
+                begin
+                    if a>3 then
+                        a:=3;
+                    else
+                    begin
+                        a:=3;
+                    	with a,b:integer; do begin
+                    		if a < b then
+                    		begin
+                    			while a < 4 do 
+                    			begin
+                    			g := --5;
+                    			end
+                    		end
+                    	end
+                    end
+                end
+            else
+                b:=a;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,292))
+    def test_call_function_293(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            if a>b then
+                if a>5 then
+                begin
+                    a:=b;
+                    if a>b then
+                    	a := 5;
+                end
+                else
+                begin
+                    if a>3 then
+                        a:=3;
+                    else
+                        a:=3;
+                    with a,b:integer; do begin
+                    	if a < b then
+                    	begin
+                    		while a < 4 do 
+                    		begin
+                    			if 3 < a then 
+                    				a:=5;
+                    			else
+                    				a:=6;
+                    		end
+                    	end
+                    end
+                end
+            else
+                b:=a;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,293))
+    def test_call_function_294(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            if a>b then
+            begin
+                if a>3 then
+                    a:=3;
+                else
+                begin
+                    a:=3;
+                   	with a,b:integer; do begin
+                    	if a < b then
+                    	begin
+                    		while a < 4 do 
+                    		begin
+                    			if 3 < a then 
+                    				a:=5;
+                    			else
+                    				a:=6;
+                    		end
+                    	end
+                    end
+                end
+            end
+            else
+                b:=a;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,294))
+    def test_call_function_295(self):
+        input = """
+        procedure main(m:integer);
+        begin
+        with a,b:integer ; do begin
+            if a < b then
+            begin
+                while a < 4 do 
+                begin
+                    if 3 < a then 
+                    	a:=5;
+                    else
+                    	a:=6;
+                end
+            end
+            else
+                b:=a;
+        end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,295))
+    def test_call_function_296(self):
+        input = """
+        procedure main(m:integer);
+        begin
+        with a,b:integer; do begin
+            if a < b then
+            begin
+                while a < 4 do 
+                    begin
+                    	if 3 < a then 
+                    		a:=5;
+                    	else
+                    		a:=6;
+                    end
+                end
+            end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,296))
+    def test_call_function_297(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            if a < b then
+            begin
+                while a < 4 do 
+                    begin
+                    	if 3 < a then 
+                    		a:=5;
+                    	else
+                    		a:=6;
+                end
+            end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,297))
+    def test_call_function_298(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            while a < 4 do 
+            begin
+                if 3 < a then 
+                    a:=5;
+                else
+                    a:=6;
+            end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,298))
+    def test_call_function_299(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            while a < 4 do 
+            begin
+                if 3 < a then 
+                    a:=5;
+            end
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,299))
+    def test_call_function_300(self):
+        input = """
+        procedure main(m:integer);
+        begin
+            if 3 < a then 
+                a:=5;
+        end
+        """
+        expect = "successful"
+        self.assertTrue(TestParser.test(input,expect,300))

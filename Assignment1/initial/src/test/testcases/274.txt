@@ -1,11 +1,8 @@
-
-        function sum_2_int(a,b:integer):integer;
-        begin
-            return a+b;
+ 
+        procedure main(); begin
+        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
+        		a:= f;
         end
-        Procedure main();
-        begin
-            if(a-b = c-d) then
-            begin
-            end
+        function foo(): integer; begin
         end
+        

@@ -1,14 +1,32 @@
 
-        procedure main();
-        Var    St:String;
-               dem: Array["A" .. "Z"] Of string;
-               i:string;
-               ch:string;
-        Begin
-            Write("Nhap xau St: "); Readln(St);
-            For ch:="A" To "Z" Do dem[ch]:=0;
-           
-            For ch:="A" To "Z" Do 
-                If dem[ch]>0 Then Writeln(ch," : ",dem[ch]);
-        End
+        procedure main(m:integer);
+        begin
+            if a>b then
+                if a>5 then
+                begin
+                    a:=b;
+                    if a>b then
+                    	a := 5;
+                end
+                else
+                begin
+                    if a>3 then
+                        a:=3;
+                    else
+                    begin
+                        a:=3;
+                    	with a,b:integer; do begin
+                    		if a < b then
+                    		begin
+                    			while a < 4 do 
+                    			begin
+                    			g := --5;
+                    			end
+                    		end
+                    	end
+                    end
+                end
+            else
+                b:=a;
+        end
         

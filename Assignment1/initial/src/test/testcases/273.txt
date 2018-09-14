@@ -1,9 +1,8 @@
-
-        function sub_2_int(a,b:integer):integer;
-        begin
-            return a---b;
+ 
+        procedure main(); begin
+        	if (112> z) and (123 > a) then 
+        		a:= f;
         end
-        Procedure main();
-        begin
-            putIntLn(sum_2_int(1,2));
+        function foo(): integer; begin
         end
+        
