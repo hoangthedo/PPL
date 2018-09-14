@@ -1,8 +1,7 @@
  
-        function ID (a,c,d:integer): integer;
-        begin
+        procedure main(); begin
         	if ((112> z[3]) and (123 > a[foo()[9]])) then 
-        		a[asd[foo()[]]]:= f;
+        		a[asd[foo()[5]]]:= f;
         end
         function foo(): integer; begin
         end

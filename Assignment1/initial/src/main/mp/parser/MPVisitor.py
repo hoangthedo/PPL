@@ -209,6 +209,11 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MPParser#exp0.
+    def visitExp0(self, ctx:MPParser.Exp0Context):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MPParser#exp1.
     def visitExp1(self, ctx:MPParser.Exp1Context):
         return self.visitChildren(ctx)

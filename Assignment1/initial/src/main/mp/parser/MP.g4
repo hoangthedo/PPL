@@ -21,7 +21,7 @@ vardec: VAR varlist*;
 varlist: ID (COMMA ID)* vartypelist SEMI;
 vartypelist: COLON vartype;
 vartype: vartypebasic | ARRAY paramarr OF vartypebasic ;
-paramarr: LSB exp DOUDOT exp RSB;
+paramarr: LSB (SUBOP? INTLIT) DOUDOT (SUBOP? INTLIT) RSB;
 vartypebasic: INTEGER | STRING | REAL | BOOLEAN;
 
 funcdec: FUNCTION (ID|MAIN) LB paramlist? RB COLON returntype SEMI vardec* compoundstmt;
@@ -50,7 +50,7 @@ unmatchstmt: IF exp THEN ((stmt|compoundstmt) | (matchstmt|compoundstmt) ELSE (u
 assignstmt: (ID|arrayvar|indexexp) (ASSIOP assignlist)+ SEMI;
 assignlist: exp ;
 arrayvar: indexexp | ID LSB exp RSB| LB exp RB LSB exp RSB;
-indexexp: ID LB calllist? RB (LSB returnbody? RSB)?;
+indexexp: ID LB calllist? RB (LSB returnbody RSB)?;
 
 ifstmt: IF exp THEN ifbody (ELSE ifbody)? ;
 ifbody: exp | stmtsingle | compoundstmt?;
@@ -86,7 +86,8 @@ procbasic: PROCEDURE ID LB paramlist? RB SEMI vardec* compoundstmt;
 
 expstmt: exp SEMI;
 exp: expr+ ;
-expr: exp1 (EQUOP | NEOP | GTOP | GTEOP | LTOP | LTEOP) exp1| exp1;
+expr: expr ( ANDOP THEN | OROP ELSE) exp0| exp0;
+exp0: exp1 (EQUOP | NEOP | GTOP | GTEOP | LTOP | LTEOP) exp1| exp1;
 exp1: exp1 (ADDOP | SUBOP | OROP) exp2 | exp2;
 exp2: exp2 (MULOP | DIVOP | DIVINOP | MODOP | ANDOP) exp3 | exp3;
 exp3: (SUBOP | NOTOP) exp3 | exp4;
@@ -187,6 +188,7 @@ BLOCK: LP .*? RP -> skip;
 LINE: '//' ~[\r\n]*-> skip;
 
 //Operator
+
 ASSIOP: ':=';
 
 ADDOP: '+';

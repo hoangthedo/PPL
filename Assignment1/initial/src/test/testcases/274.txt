@@ -1,6 +1,6 @@
  
         procedure main(); begin
-        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
+        	if ((112> z) and (123 > a)) then 
         		a:= f;
         end
         function foo(): integer; begin

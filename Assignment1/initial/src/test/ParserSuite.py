@@ -5,6 +5,8 @@ class ParserSuite(unittest.TestCase):
     def test_simple_program(self):
         input = """procedure main ();
         begin
+            if 2 mod 3 then begin
+            end
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,201))
@@ -806,34 +808,12 @@ class ParserSuite(unittest.TestCase):
         """
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,274))
-    def test_call_function_274(self):
+    
+    def test_call_function_275(self):
         input = """ 
         procedure main(); begin
         	if ((112> z[3]) and (123 > a[foo()[9]])) then 
-        		a:= f;
-        end
-        function foo(): integer; begin
-        end
-        """
-        expect = "successful"
-        self.assertTrue(TestParser.test(input,expect,274))
-    def test_call_function_275(self):
-        input = """ 
-        procdure main(); begin
-        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
-        		a[asd[foo()[]]]:= f;
-        end
-        function foo(): integer; begin
-        end
-        """
-        expect = "successful"
-        self.assertTrue(TestParser.test(input,expect,275))
-    def test_call_function_275(self):
-        input = """ 
-        function ID (a,c,d:integer): integer;
-        begin
-        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
-        		a[asd[foo()[]]]:= f;
+        		a[asd[foo()[5]]]:= f;
         end
         function foo(): integer; begin
         end
@@ -845,7 +825,7 @@ class ParserSuite(unittest.TestCase):
         function ID (a,c,d:integer): integer;
         begin
         	if (a) then 
-        		a[asd[foo()[]]]:= f;
+        		a[asd[foo()[5]]]:= f;
         end
         function foo(): integer; begin
         end
