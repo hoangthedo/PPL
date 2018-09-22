@@ -1,1 +1,1 @@
-with a:integer;do
+int main

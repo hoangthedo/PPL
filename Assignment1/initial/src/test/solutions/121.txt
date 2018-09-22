@@ -1,1 +1,1 @@
-function,foo,(,[,var,a,=,5,;,],),;,<EOF>
+procedure,main,(,),;,<EOF>

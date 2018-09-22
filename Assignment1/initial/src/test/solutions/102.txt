@@ -1,1 +1,1 @@
-aCBbdc,<EOF>
+test\n,<EOF>

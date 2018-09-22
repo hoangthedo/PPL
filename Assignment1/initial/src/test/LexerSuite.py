@@ -42,11 +42,11 @@ class LexerSuite(unittest.TestCase):
     def test_identifier119(self):
         self.assertTrue(TestLexer.test("begin end while","begin,end,while,<EOF>",119))
     def test_identifier120(self):
-        self.assertTrue(TestLexer.test("for with 4e3 4e-3","for,with,4e3,4e-3<EOF>",120))
+        self.assertTrue(TestLexer.test("for with 4e3 4e-3","for,with,4e3,4e-3,<EOF>",120))
     def test_identifier121(self):
         self.assertTrue(TestLexer.test("procedure main ();","procedure,main,(,),;,<EOF>",121))
     def test_identifier122(self):
-        self.assertTrue(TestLexer.test("function foo(): real;","function,foo,(,),;,<EOF>",122))
+        self.assertTrue(TestLexer.test("function foo(): real;","function,foo,(,),:,real,;,<EOF>",122))
     def test_identifier123(self):
         self.assertTrue(TestLexer.test("var a,b,c: real;","var,a,,,b,,,c,:,real,;,<EOF>",123))
     def test_identifier124(self):
@@ -80,7 +80,7 @@ class LexerSuite(unittest.TestCase):
     def test_identifier138(self):
         self.assertTrue(TestLexer.test("array[1*2 .. 4.]","array,[,1,*,2,..,4.,],<EOF>",138))
     def test_identifier139(self):
-        self.assertTrue(TestLexer.test("array[1-2 .. .4]","array,[,1,-,2,..,.4,]",139))
+        self.assertTrue(TestLexer.test("array[1-2 .. .4]","array,[,1,-,2,..,.4,],<EOF>",139))
     def test_identifier140(self):
         self.assertTrue(TestLexer.test("array[1+2 .. 3] ","array,[,1,+,2,..,3,],<EOF>",140))
     def test_identifier140(self):
@@ -94,7 +94,7 @@ class LexerSuite(unittest.TestCase):
     def test_identifier144(self):
         self.assertTrue(TestLexer.test("not with me","not,with,me,<EOF>",144))
     def test_identifier145(self):
-        self.assertTrue(TestLexer.test("{,} ","{,,,},<EOF>",145))
+        self.assertTrue(TestLexer.test("{,} ","<EOF>",145))
     def test_identifier146(self):
         self.assertTrue(TestLexer.test("0.25E123","0.25E123,<EOF>",146))
     def test_identifier147(self):
@@ -130,9 +130,9 @@ class LexerSuite(unittest.TestCase):
     def test_identifier162(self):
         self.assertTrue(TestLexer.test("]","],<EOF>",162))
     def test_identifier163(self):
-        self.assertTrue(TestLexer.test("\\","\\,<EOF>",163))
+        self.assertTrue(TestLexer.test("\\","Error Token \\",163))
     def test_identifier164(self):
-        self.assertTrue(TestLexer.test("//","//,<EOF>",164))
+        self.assertTrue(TestLexer.test("//","<EOF>",164))
     def test_identifier165(self):
         self.assertTrue(TestLexer.test("*","*,<EOF>",165))
     def test_identifier166(self):
@@ -170,7 +170,7 @@ class LexerSuite(unittest.TestCase):
     def test_identifier182(self):
         self.assertTrue(TestLexer.test("!","Error Token !",182))
     def test_identifier183(self):
-        self.assertTrue(TestLexer.test("!@#","Error Token !@#",183))
+        self.assertTrue(TestLexer.test("!@#","Error Token !",183))
     def test_identifier184(self):
         self.assertTrue(TestLexer.test("\"PPL\\e asd","Illegal Escape In String: PPL\\e",184))
     def test_identifier185(self):
@@ -178,9 +178,9 @@ class LexerSuite(unittest.TestCase):
     def test_identifier186(self):
         self.assertTrue(TestLexer.test("with a:integerr;do","with,a,:,integerr,;,do,<EOF>",186))
     def test_identifier187(self):
-        self.assertTrue(TestLexer.test(""" "asdasd\n" ""","""Unclosed String: asdasd""",187))
+        self.assertTrue(TestLexer.test(""""asdasd ""","""Unclosed String: asdasd""",187))
     def test_identifier188(self):
-        self.assertTrue(TestLexer.test(""" "asdasd\nasd" ""","""Unclosed String: asdasd""",188))
+        self.assertTrue(TestLexer.test("\"asdasd\" ""","Unclosed String: asdasd",188))
     def test_identifier189(self):
         self.assertTrue(TestLexer.test("INT","INT,<EOF>",189))
     def test_identifier190(self):

@@ -1,1 +1,1 @@
-123,and,123456,<EOF>
+function,foo,(,),:,real,;,<EOF>

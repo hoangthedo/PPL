@@ -1,1 +1,1 @@
-def,test_call_function_249,(,self,),:,<EOF>
+9,test9,<EOF>

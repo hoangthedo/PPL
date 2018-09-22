@@ -1,1 +1,1 @@
-while,a,>,b,do,<EOF>
+123,asd,<EOF>

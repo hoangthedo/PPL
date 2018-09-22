@@ -1,1 +1,1 @@
-a:= 5+bcd()+edf()[1];
+when while

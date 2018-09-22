@@ -1,1 +1,1 @@
-int@#$%^if,<EOF>
+else,a,:=,-,5,;,<EOF>

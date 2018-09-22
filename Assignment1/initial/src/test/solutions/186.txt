@@ -1,1 +1,1 @@
-a,/,b,/,d,-,2,<EOF>
+with,a,:,integerr,;,do,<EOF>

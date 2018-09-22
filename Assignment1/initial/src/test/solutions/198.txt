@@ -1,1 +1,1 @@
-putIntLn,(,main,),;,<EOF>
+98,test,<EOF>

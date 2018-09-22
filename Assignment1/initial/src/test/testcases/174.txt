@@ -1,1 +1,1 @@
-a[intt(5)]
+if () then return a;

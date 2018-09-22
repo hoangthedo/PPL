@@ -1,1 +1,1 @@
-Illegal Escape In String: \ 
+0.25E123,<EOF>

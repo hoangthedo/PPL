@@ -1,1 +1,1 @@
-if(a>b)then
+var a,b,c: real;

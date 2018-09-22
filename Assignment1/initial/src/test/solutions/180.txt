@@ -1,1 +1,1 @@
-i,:,real,;,<EOF>
+Error Token "

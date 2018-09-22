@@ -1,1 +1,1 @@
-return,true,false,<EOF>
+if,n,>,3,then,<EOF>

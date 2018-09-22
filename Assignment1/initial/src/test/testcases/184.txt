@@ -1,1 +1,1 @@
-g mod 5 = a div b
+"PPL\e asd

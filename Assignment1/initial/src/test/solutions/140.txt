@@ -1,1 +1,1 @@
-Illegal Escape In String: aa\k
+array,[,1,+,2,..,3,],<EOF>

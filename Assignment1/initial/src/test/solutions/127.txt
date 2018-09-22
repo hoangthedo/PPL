@@ -1,1 +1,1 @@
-x,<=,y,and,y,<=,5,;,<EOF>
+do,begin,n,<=,4.5,<EOF>

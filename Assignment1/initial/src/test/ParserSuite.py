@@ -397,7 +397,7 @@ class ParserSuite(unittest.TestCase):
         input = """ 
         Procedure main();
         begin
-            n:= a(1,2)[b(123+5)[c(174.145)]];
+            n:= a(1,2)[2];
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,240))
@@ -504,7 +504,7 @@ class ParserSuite(unittest.TestCase):
         Procedure main();
         begin
             with a:integer;b : array [1 .. 2] of real; do
-                b := c[a]+b;
+                b := c[2]+b;
         end"""
         expect = "successful"
         self.assertTrue(TestParser.test(input,expect,247))
@@ -812,8 +812,8 @@ class ParserSuite(unittest.TestCase):
     def test_call_function_275(self):
         input = """ 
         procedure main(); begin
-        	if ((112> z[3]) and (123 > a[foo()[9]])) then 
-        		a[asd[foo()[5]]]:= f;
+        	if ((112> z[3]) and (123 > a[9])) then 
+        		a[5]:= f;
         end
         function foo(): integer; begin
         end
@@ -825,7 +825,7 @@ class ParserSuite(unittest.TestCase):
         function ID (a,c,d:integer): integer;
         begin
         	if (a) then 
-        		a[asd[foo()[5]]]:= f;
+        		a[6]:= f;
         end
         function foo(): integer; begin
         end
@@ -876,7 +876,7 @@ class ParserSuite(unittest.TestCase):
         input = """
         function foo(): integer; begin
         g:= 1+(2+-2) / (19 + 26) * ((1/-2) + 5/6);
-        a:=t[1+foo()[2]+ foo()];
+        a:=t[1];
         end
         """
         expect = "successful"
@@ -885,7 +885,7 @@ class ParserSuite(unittest.TestCase):
         input = """
         function foo(): integer; begin
         g:= 1+(2+-2) / (19 + 26) * ((1/-2) + 5/6);
-        a:=t[1+foo()[2]+ foo()];
+        a:=t[1];
         end
         """
         expect = "successful"
@@ -915,7 +915,7 @@ class ParserSuite(unittest.TestCase):
         procedure main(m:integer);
         var y : array[1 .. 32] of string;
         begin
-            foo("ds","as")[3] := a[foo(2)[3]] + -3;        
+            foo("ds","as")[3] := a[3] + -3;        
         end
         """
         expect = "successful"
@@ -940,7 +940,7 @@ class ParserSuite(unittest.TestCase):
         input = """
         procedure main(m:integer);
         begin
-            foo[3] := a[foo(2)[3]] + -3;
+            foo[3] := a[3] + -3;
         end
         """
         expect = "successful"

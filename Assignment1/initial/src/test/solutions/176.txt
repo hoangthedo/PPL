@@ -1,1 +1,1 @@
-begin,end,<EOF>
+void,<EOF>

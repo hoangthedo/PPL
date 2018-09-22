@@ -1,1 +1,1 @@
-123a123
+"when the lexer detects an unterminated string

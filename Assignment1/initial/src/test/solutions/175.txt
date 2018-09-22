@@ -1,1 +1,1 @@
-Procedure,main,(,),;,<EOF>
+downto,<EOF>

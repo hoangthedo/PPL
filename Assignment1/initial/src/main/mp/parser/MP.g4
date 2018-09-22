@@ -50,7 +50,7 @@ unmatchstmt: IF exp THEN ((stmt|compoundstmt) | (matchstmt|compoundstmt) ELSE (u
 assignstmt: (ID|arrayvar|indexexp) (ASSIOP assignlist)+ SEMI;
 assignlist: exp ;
 arrayvar: indexexp | ID LSB exp RSB| LB exp RB LSB exp RSB;
-indexexp: ID LB calllist? RB (LSB returnbody RSB)?;
+indexexp: ID LB calllist? RB (LSB (SUBOP? INTLIT) RSB)?;
 
 ifstmt: IF exp THEN ifbody (ELSE ifbody)? ;
 ifbody: exp | stmtsingle | compoundstmt?;
@@ -72,7 +72,7 @@ returnbody: exp | indexexp;
 
 withstmt: WITH paramlist? SEMI DO (stmtsingle| compoundstmt);
 
-funcall: ID LB calllist? RB (LSB returnbody RSB)? SEMI;
+funcall: ID LB calllist? RB (LSB (SUBOP? INTLIT) RSB)? SEMI;
 calllist: exp (COMMA exp)*;
 
 
@@ -288,16 +288,17 @@ STRINGLIT
 ILLEGAL_ESCAPE
     : '"' ('\\' [bfrnt'"\\] | ~["\\])*? ([\\] ~[bfrnt'"\\]) 
         {
-           raise IllegalEscape(self.text[1:])
+            
+             raise IllegalEscape(self.text[1:])
         }
         //(ESC | ~[\r\n] )*  '"'
     ;
 
 UNCLOSE_STRING
-    :  '"' ('\\' [bfrnt'"\\] | ~["\r\n] |('\n'| EOF))
+    :  '"' 
         {
             if self.text[-1]=='\n':
-                 raise UncloseString(self.text[1:-1])
+                raise UncloseString(self.text[1:-1])
             else:
                 raise UncloseString(self.text[1:])
         }
