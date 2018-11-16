@@ -1,0 +1,20 @@
+
+        function f(i:integer;j:real):real;
+        var a: real;
+            b: integer;
+            c: string;
+        begin
+            if a > 0 then begin
+                a := b;
+                break;
+                end
+            else begin
+            end
+            return a;
+        end
+        procedure main ();
+        var b:real;
+        begin
+         b:=f(1,8.2);
+        end
+        

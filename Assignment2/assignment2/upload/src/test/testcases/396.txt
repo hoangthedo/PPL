@@ -1,0 +1,8 @@
+Procedure main();
+        var a,b,c:integer;
+        begin
+            if(y<5)and(z<10)then
+            begin
+            end
+        end
+        

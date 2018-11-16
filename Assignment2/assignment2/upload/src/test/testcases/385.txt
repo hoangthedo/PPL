@@ -1,0 +1,8 @@
+procedure main();
+        begin
+            while (a>5) do
+                begin
+                    s:=s/s[i];
+                end
+        end 
+        

@@ -1,0 +1,5 @@
+procedure main(m:integer);
+        var y : array[1 .. 32] of string;
+        begin
+            foo("ds","as")[3] := a[3] + -3;        
+        end

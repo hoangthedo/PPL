@@ -1,0 +1,22 @@
+
+        function f():integer;
+        var x,y:integer;
+        begin
+            with
+                x:integer;
+                y:real;
+            do begin
+                return 100;
+            end
+            x:= x+1; 
+            end
+
+        var b: integer;
+            d: real;
+        procedure main ();
+        var a:integer;
+            b: boolean;
+        begin
+            a := d + f();
+        end
+        

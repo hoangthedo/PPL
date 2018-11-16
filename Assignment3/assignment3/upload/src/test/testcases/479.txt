@@ -1,0 +1,21 @@
+
+        function foo():integer;
+        begin
+            return 4;
+        end
+        function k():real;
+        begin
+        return 3.4;
+        end
+        function f():integer;
+        var x,y:integer;
+        begin
+
+        return foo();
+        end
+        procedure main ();
+        var x:real;
+        begin
+            x:=f();
+        end
+        

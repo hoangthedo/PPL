@@ -1,0 +1,21 @@
+
+        function f():integer;
+        var x,y:integer;
+        begin
+
+            while(x<y) do
+            begin
+                with x:integer;y:real; do
+                begin
+                    with a: integer; do
+                        return a;
+                end
+                x:=x+y;
+            end
+        end
+        procedure main ();
+        var x:real;
+        begin
+            x:=f();
+        end
+        

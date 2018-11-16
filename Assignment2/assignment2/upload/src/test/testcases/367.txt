@@ -1,0 +1,11 @@
+procedure main(m:integer);
+        var y : array[1 .. 49] of string;
+        begin
+            if(a>(b*m)) then
+                if(a>(b*m)) then
+                    begin
+                    end
+                                                        
+            while s = a do
+                m:=2;                     
+         end

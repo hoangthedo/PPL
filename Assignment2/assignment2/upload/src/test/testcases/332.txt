@@ -1,0 +1,6 @@
+function foo(a:string): string;
+        var b: string;
+        begin
+            putIntLn(-4);
+        end
+        

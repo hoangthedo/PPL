@@ -1,0 +1,6 @@
+
+        function a():integer;
+        begin
+            return a mod b;
+        end
+        

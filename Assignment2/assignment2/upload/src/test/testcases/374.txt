@@ -1,0 +1,5 @@
+function a():integer;
+        begin
+            return a div b;
+        end
+        

@@ -1,0 +1,8 @@
+var p:real;
+        i:integer;
+        function power(x:real;y:integer):real;
+        var p:real;
+        i:integer;
+        begin
+        end    
+        

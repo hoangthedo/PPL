@@ -1,0 +1,14 @@
+
+        procedure main ();
+        var a:integer;
+        begin
+            for a:= 0 to 12 do
+            begin
+                if a > 0 then begin
+                    return;
+                    a:=5;
+                end
+            end
+
+        end
+        

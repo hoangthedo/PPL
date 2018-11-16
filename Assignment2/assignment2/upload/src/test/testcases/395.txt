@@ -1,0 +1,5 @@
+Procedure main();
+        begin
+            foo("aa\n");
+        end
+        

@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[],VoidType(),[],[For(Id(i)Id(n),Id(i),False,[AssignStmt(Id(S),BinaryOp(*,Id(S),Id(i))),If(BinaryOp(>,Id(S),IntLiteral(20)),[Break],[])])])])

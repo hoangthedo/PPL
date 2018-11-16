@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(a),[],IntType,[],[Return(Some(BinaryOp(div,Id(a),Id(b))))])])

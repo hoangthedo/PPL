@@ -1,0 +1,5 @@
+Procedure main();
+        begin
+            a:=b:=c:= abc(a,b+(d+1) + 2,c)+dfc(a,c,d);
+        end
+        

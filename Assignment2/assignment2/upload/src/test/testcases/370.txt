@@ -1,0 +1,7 @@
+function abc():real;
+        var a:integer;
+        begin
+            a:=5;
+                with a,c:integer; do
+                    a:= b;
+        end

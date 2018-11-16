@@ -1,0 +1,9 @@
+procedure main();
+        begin
+            j:=i;
+            while j mod 5 = 0 do
+            begin
+                j:=j div 5;
+                count:=count+1;
+            end
+        end

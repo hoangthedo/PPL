@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(foo),[VarDecl(Id(a),StringType)],StringType,[VarDecl(Id(b),StringType)],[CallStmt(Id(putIntLn),[UnaryOp(-,IntLiteral(4))])])])

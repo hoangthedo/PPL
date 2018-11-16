@@ -1,0 +1,7 @@
+Procedure main();
+        var a,b:integer;
+            a:real;
+            b:string;
+            c:boolean;
+        begin
+        end

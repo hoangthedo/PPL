@@ -1,0 +1,5 @@
+
+        procedure main (i:real);
+        begin
+        end
+        

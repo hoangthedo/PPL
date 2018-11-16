@@ -1,0 +1,16 @@
+
+        function f(i:integer;j:real):integer;
+        var a: integer;
+        begin
+            a := a +b;
+            return d;
+        end
+        var b: integer;
+            d: real;
+        procedure main ();
+        var a:integer;
+            b: boolean;
+        begin
+            d:=f(a,d);
+        end
+        

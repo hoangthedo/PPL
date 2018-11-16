@@ -1,0 +1,6 @@
+procedure main();
+        begin
+            with a : real; m: array[1 .. 4] of real; do
+                While (A=10) Do Sum:=Sum+1;
+        end
+        

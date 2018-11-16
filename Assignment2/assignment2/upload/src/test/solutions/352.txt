@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[VarDecl(Id(m),IntType)],VoidType(),[],[While(BinaryOp(>,Id(a),IntLiteral(0)),[])])])

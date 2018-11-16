@@ -1,0 +1,8 @@
+function foo(a:string): string;
+        var b: string;
+        begin
+        end
+        var a,b:boolean;
+        procedure main();
+        begin end
+        

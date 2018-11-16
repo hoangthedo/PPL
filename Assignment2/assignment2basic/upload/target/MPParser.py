@@ -7,27 +7,24 @@ import sys
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\17")
-        buf.write("D\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
-        buf.write("\t\b\4\t\t\t\4\n\t\n\3\2\6\2\26\n\2\r\2\16\2\27\3\2\3")
-        buf.write("\2\3\3\3\3\5\3\36\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\5")
-        buf.write("\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\6\3\6\5\6\62\n\6\3")
-        buf.write("\6\3\6\3\7\3\7\3\7\3\b\3\b\3\b\5\b<\n\b\3\b\3\b\3\t\3")
-        buf.write("\t\3\n\3\n\3\n\2\2\13\2\4\6\b\n\f\16\20\22\2\2\2>\2\25")
-        buf.write("\3\2\2\2\4\35\3\2\2\2\6\37\3\2\2\2\b&\3\2\2\2\n/\3\2\2")
-        buf.write("\2\f\65\3\2\2\2\168\3\2\2\2\20?\3\2\2\2\22A\3\2\2\2\24")
-        buf.write("\26\5\4\3\2\25\24\3\2\2\2\26\27\3\2\2\2\27\25\3\2\2\2")
-        buf.write("\27\30\3\2\2\2\30\31\3\2\2\2\31\32\7\2\2\3\32\3\3\2\2")
-        buf.write("\2\33\36\5\b\5\2\34\36\5\6\4\2\35\33\3\2\2\2\35\34\3\2")
-        buf.write("\2\2\36\5\3\2\2\2\37 \7\t\2\2 !\7\16\2\2!\"\7\4\2\2\"")
-        buf.write("#\7\5\2\2#$\7\6\2\2$%\5\n\6\2%\7\3\2\2\2&\'\7\n\2\2\'")
-        buf.write("(\7\16\2\2()\7\4\2\2)*\7\5\2\2*+\7\7\2\2+,\5\22\n\2,-")
-        buf.write("\7\6\2\2-.\5\n\6\2.\t\3\2\2\2/\61\7\13\2\2\60\62\5\f\7")
-        buf.write("\2\61\60\3\2\2\2\61\62\3\2\2\2\62\63\3\2\2\2\63\64\7\f")
-        buf.write("\2\2\64\13\3\2\2\2\65\66\5\16\b\2\66\67\7\6\2\2\67\r\3")
-        buf.write("\2\2\289\7\16\2\29;\7\4\2\2:<\5\20\t\2;:\3\2\2\2;<\3\2")
-        buf.write("\2\2<=\3\2\2\2=>\7\5\2\2>\17\3\2\2\2?@\7\3\2\2@\21\3\2")
-        buf.write("\2\2AB\7\r\2\2B\23\3\2\2\2\6\27\35\61;")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\f")
+        buf.write("\63\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\6\2\16")
+        buf.write("\n\2\r\2\16\2\17\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\7\4\32")
+        buf.write("\n\4\f\4\16\4\35\13\4\3\5\3\5\3\5\3\5\3\5\3\5\7\5%\n\5")
+        buf.write("\f\5\16\5(\13\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6\61\n\6")
+        buf.write("\3\6\2\3\b\7\2\4\6\b\n\2\2\2\63\2\r\3\2\2\2\4\21\3\2\2")
+        buf.write("\2\6\26\3\2\2\2\b\36\3\2\2\2\n\60\3\2\2\2\f\16\5\4\3\2")
+        buf.write("\r\f\3\2\2\2\16\17\3\2\2\2\17\r\3\2\2\2\17\20\3\2\2\2")
+        buf.write("\20\3\3\2\2\2\21\22\7\13\2\2\22\23\7\3\2\2\23\24\5\6\4")
+        buf.write("\2\24\25\7\4\2\2\25\5\3\2\2\2\26\33\5\b\5\2\27\30\7\t")
+        buf.write("\2\2\30\32\5\b\5\2\31\27\3\2\2\2\32\35\3\2\2\2\33\31\3")
+        buf.write("\2\2\2\33\34\3\2\2\2\34\7\3\2\2\2\35\33\3\2\2\2\36\37")
+        buf.write("\b\5\1\2\37 \5\n\6\2 &\3\2\2\2!\"\f\4\2\2\"#\7\n\2\2#")
+        buf.write("%\5\n\6\2$!\3\2\2\2%(\3\2\2\2&$\3\2\2\2&\'\3\2\2\2\'\t")
+        buf.write("\3\2\2\2(&\3\2\2\2)\61\7\13\2\2*\61\7\7\2\2+\61\7\b\2")
+        buf.write("\2,-\7\5\2\2-.\5\6\4\2./\7\6\2\2/\61\3\2\2\2\60)\3\2\2")
+        buf.write("\2\60*\3\2\2\2\60+\3\2\2\2\60,\3\2\2\2\61\13\3\2\2\2\6")
+        buf.write("\17\33&\60")
         return buf.getvalue()
 
 
@@ -41,39 +38,31 @@ class MPParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "<INVALID>", "'('", "')'", "';'", "':'" ]
+    literalNames = [ "<INVALID>", "'='", "';'", "'('", "')'" ]
 
-    symbolicNames = [ "<INVALID>", "INTLIT", "LB", "RB", "SEMI", "COLON", 
-                      "WS", "PROCEDURE", "FUNCTION", "BEGIN", "END", "INTTYPE", 
+    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "INTLIT", "FLOATLIT", "ADDOP", "MULOP", 
                       "ID", "ERROR_CHAR" ]
 
-    RULE_program = 0
-    RULE_decl = 1
-    RULE_procdecl = 2
-    RULE_funcdecl = 3
-    RULE_body = 4
-    RULE_stmt = 5
-    RULE_funcall = 6
-    RULE_exp = 7
-    RULE_mtype = 8
+    RULE_prog = 0
+    RULE_stmt = 1
+    RULE_exp = 2
+    RULE_term = 3
+    RULE_fact = 4
 
-    ruleNames =  [ "program", "decl", "procdecl", "funcdecl", "body", "stmt", 
-                   "funcall", "exp", "mtype" ]
+    ruleNames =  [ "prog", "stmt", "exp", "term", "fact" ]
 
     EOF = Token.EOF
-    INTLIT=1
-    LB=2
-    RB=3
-    SEMI=4
-    COLON=5
-    WS=6
-    PROCEDURE=7
-    FUNCTION=8
-    BEGIN=9
-    END=10
-    INTTYPE=11
-    ID=12
-    ERROR_CHAR=13
+    T__0=1
+    T__1=2
+    T__2=3
+    T__3=4
+    INTLIT=5
+    FLOATLIT=6
+    ADDOP=7
+    MULOP=8
+    ID=9
+    ERROR_CHAR=10
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -83,302 +72,50 @@ class MPParser ( Parser ):
 
 
 
-    class ProgramContext(ParserRuleContext):
+    class ProgContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def EOF(self):
-            return self.getToken(MPParser.EOF, 0)
-
-        def decl(self, i:int=None):
+        def stmt(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MPParser.DeclContext)
+                return self.getTypedRuleContexts(MPParser.StmtContext)
             else:
-                return self.getTypedRuleContext(MPParser.DeclContext,i)
+                return self.getTypedRuleContext(MPParser.StmtContext,i)
 
 
         def getRuleIndex(self):
-            return MPParser.RULE_program
+            return MPParser.RULE_prog
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgram" ):
-                return visitor.visitProgram(self)
+            if hasattr( visitor, "visitProg" ):
+                return visitor.visitProg(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def program(self):
+    def prog(self):
 
-        localctx = MPParser.ProgramContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 0, self.RULE_program)
+        localctx = MPParser.ProgContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 0, self.RULE_prog)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 19 
+            self.state = 11 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 18
-                self.decl()
-                self.state = 21 
+                self.state = 10
+                self.stmt()
+                self.state = 13 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==MPParser.PROCEDURE or _la==MPParser.FUNCTION):
+                if not (_la==MPParser.ID):
                     break
 
-            self.state = 23
-            self.match(MPParser.EOF)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class DeclContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def funcdecl(self):
-            return self.getTypedRuleContext(MPParser.FuncdeclContext,0)
-
-
-        def procdecl(self):
-            return self.getTypedRuleContext(MPParser.ProcdeclContext,0)
-
-
-        def getRuleIndex(self):
-            return MPParser.RULE_decl
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDecl" ):
-                return visitor.visitDecl(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def decl(self):
-
-        localctx = MPParser.DeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_decl)
-        try:
-            self.state = 27
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [MPParser.FUNCTION]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 25
-                self.funcdecl()
-                pass
-            elif token in [MPParser.PROCEDURE]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 26
-                self.procdecl()
-                pass
-            else:
-                raise NoViableAltException(self)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class ProcdeclContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def PROCEDURE(self):
-            return self.getToken(MPParser.PROCEDURE, 0)
-
-        def ID(self):
-            return self.getToken(MPParser.ID, 0)
-
-        def LB(self):
-            return self.getToken(MPParser.LB, 0)
-
-        def RB(self):
-            return self.getToken(MPParser.RB, 0)
-
-        def SEMI(self):
-            return self.getToken(MPParser.SEMI, 0)
-
-        def body(self):
-            return self.getTypedRuleContext(MPParser.BodyContext,0)
-
-
-        def getRuleIndex(self):
-            return MPParser.RULE_procdecl
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProcdecl" ):
-                return visitor.visitProcdecl(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def procdecl(self):
-
-        localctx = MPParser.ProcdeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_procdecl)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 29
-            self.match(MPParser.PROCEDURE)
-            self.state = 30
-            self.match(MPParser.ID)
-            self.state = 31
-            self.match(MPParser.LB)
-            self.state = 32
-            self.match(MPParser.RB)
-            self.state = 33
-            self.match(MPParser.SEMI)
-            self.state = 34
-            self.body()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class FuncdeclContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def FUNCTION(self):
-            return self.getToken(MPParser.FUNCTION, 0)
-
-        def ID(self):
-            return self.getToken(MPParser.ID, 0)
-
-        def LB(self):
-            return self.getToken(MPParser.LB, 0)
-
-        def RB(self):
-            return self.getToken(MPParser.RB, 0)
-
-        def COLON(self):
-            return self.getToken(MPParser.COLON, 0)
-
-        def mtype(self):
-            return self.getTypedRuleContext(MPParser.MtypeContext,0)
-
-
-        def SEMI(self):
-            return self.getToken(MPParser.SEMI, 0)
-
-        def body(self):
-            return self.getTypedRuleContext(MPParser.BodyContext,0)
-
-
-        def getRuleIndex(self):
-            return MPParser.RULE_funcdecl
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFuncdecl" ):
-                return visitor.visitFuncdecl(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def funcdecl(self):
-
-        localctx = MPParser.FuncdeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_funcdecl)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 36
-            self.match(MPParser.FUNCTION)
-            self.state = 37
-            self.match(MPParser.ID)
-            self.state = 38
-            self.match(MPParser.LB)
-            self.state = 39
-            self.match(MPParser.RB)
-            self.state = 40
-            self.match(MPParser.COLON)
-            self.state = 41
-            self.mtype()
-            self.state = 42
-            self.match(MPParser.SEMI)
-            self.state = 43
-            self.body()
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class BodyContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def BEGIN(self):
-            return self.getToken(MPParser.BEGIN, 0)
-
-        def END(self):
-            return self.getToken(MPParser.END, 0)
-
-        def stmt(self):
-            return self.getTypedRuleContext(MPParser.StmtContext,0)
-
-
-        def getRuleIndex(self):
-            return MPParser.RULE_body
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitBody" ):
-                return visitor.visitBody(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def body(self):
-
-        localctx = MPParser.BodyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_body)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 45
-            self.match(MPParser.BEGIN)
-            self.state = 47
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==MPParser.ID:
-                self.state = 46
-                self.stmt()
-
-
-            self.state = 49
-            self.match(MPParser.END)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -393,12 +130,12 @@ class MPParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def funcall(self):
-            return self.getTypedRuleContext(MPParser.FuncallContext,0)
+        def ID(self):
+            return self.getToken(MPParser.ID, 0)
 
+        def exp(self):
+            return self.getTypedRuleContext(MPParser.ExpContext,0)
 
-        def SEMI(self):
-            return self.getToken(MPParser.SEMI, 0)
 
         def getRuleIndex(self):
             return MPParser.RULE_stmt
@@ -415,73 +152,17 @@ class MPParser ( Parser ):
     def stmt(self):
 
         localctx = MPParser.StmtContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_stmt)
+        self.enterRule(localctx, 2, self.RULE_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 51
-            self.funcall()
-            self.state = 52
-            self.match(MPParser.SEMI)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-    class FuncallContext(ParserRuleContext):
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def ID(self):
-            return self.getToken(MPParser.ID, 0)
-
-        def LB(self):
-            return self.getToken(MPParser.LB, 0)
-
-        def RB(self):
-            return self.getToken(MPParser.RB, 0)
-
-        def exp(self):
-            return self.getTypedRuleContext(MPParser.ExpContext,0)
-
-
-        def getRuleIndex(self):
-            return MPParser.RULE_funcall
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFuncall" ):
-                return visitor.visitFuncall(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def funcall(self):
-
-        localctx = MPParser.FuncallContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_funcall)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 54
+            self.state = 15
             self.match(MPParser.ID)
-            self.state = 55
-            self.match(MPParser.LB)
-            self.state = 57
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==MPParser.INTLIT:
-                self.state = 56
-                self.exp()
-
-
-            self.state = 59
-            self.match(MPParser.RB)
+            self.state = 16
+            self.match(MPParser.T__0)
+            self.state = 17
+            self.exp()
+            self.state = 18
+            self.match(MPParser.T__1)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -496,8 +177,18 @@ class MPParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def INTLIT(self):
-            return self.getToken(MPParser.INTLIT, 0)
+        def term(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(MPParser.TermContext)
+            else:
+                return self.getTypedRuleContext(MPParser.TermContext,i)
+
+
+        def ADDOP(self, i:int=None):
+            if i is None:
+                return self.getTokens(MPParser.ADDOP)
+            else:
+                return self.getToken(MPParser.ADDOP, i)
 
         def getRuleIndex(self):
             return MPParser.RULE_exp
@@ -514,11 +205,24 @@ class MPParser ( Parser ):
     def exp(self):
 
         localctx = MPParser.ExpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_exp)
+        self.enterRule(localctx, 4, self.RULE_exp)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 61
-            self.match(MPParser.INTLIT)
+            self.state = 20
+            self.term(0)
+            self.state = 25
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==MPParser.ADDOP:
+                self.state = 21
+                self.match(MPParser.ADDOP)
+                self.state = 22
+                self.term(0)
+                self.state = 27
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -527,35 +231,142 @@ class MPParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class MtypeContext(ParserRuleContext):
+    class TermContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def INTTYPE(self):
-            return self.getToken(MPParser.INTTYPE, 0)
+        def fact(self):
+            return self.getTypedRuleContext(MPParser.FactContext,0)
+
+
+        def term(self):
+            return self.getTypedRuleContext(MPParser.TermContext,0)
+
+
+        def MULOP(self):
+            return self.getToken(MPParser.MULOP, 0)
 
         def getRuleIndex(self):
-            return MPParser.RULE_mtype
+            return MPParser.RULE_term
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMtype" ):
-                return visitor.visitMtype(self)
+            if hasattr( visitor, "visitTerm" ):
+                return visitor.visitTerm(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def term(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = MPParser.TermContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 6
+        self.enterRecursionRule(localctx, 6, self.RULE_term, _p)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 29
+            self.fact()
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 36
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = MPParser.TermContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_term)
+                    self.state = 31
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 32
+                    self.match(MPParser.MULOP)
+                    self.state = 33
+                    self.fact() 
+                self.state = 38
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+    class FactContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(MPParser.ID, 0)
+
+        def INTLIT(self):
+            return self.getToken(MPParser.INTLIT, 0)
+
+        def FLOATLIT(self):
+            return self.getToken(MPParser.FLOATLIT, 0)
+
+        def exp(self):
+            return self.getTypedRuleContext(MPParser.ExpContext,0)
+
+
+        def getRuleIndex(self):
+            return MPParser.RULE_fact
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFact" ):
+                return visitor.visitFact(self)
             else:
                 return visitor.visitChildren(self)
 
 
 
 
-    def mtype(self):
+    def fact(self):
 
-        localctx = MPParser.MtypeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_mtype)
+        localctx = MPParser.FactContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_fact)
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 63
-            self.match(MPParser.INTTYPE)
+            self.state = 46
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [MPParser.ID]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 39
+                self.match(MPParser.ID)
+                pass
+            elif token in [MPParser.INTLIT]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 40
+                self.match(MPParser.INTLIT)
+                pass
+            elif token in [MPParser.FLOATLIT]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 41
+                self.match(MPParser.FLOATLIT)
+                pass
+            elif token in [MPParser.T__2]:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 42
+                self.match(MPParser.T__2)
+                self.state = 43
+                self.exp()
+                self.state = 44
+                self.match(MPParser.T__3)
+                pass
+            else:
+                raise NoViableAltException(self)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -564,6 +375,22 @@ class MPParser ( Parser ):
             self.exitRule()
         return localctx
 
+
+
+    def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
+        if self._predicates == None:
+            self._predicates = dict()
+        self._predicates[3] = self.term_sempred
+        pred = self._predicates.get(ruleIndex, None)
+        if pred is None:
+            raise Exception("No predicate with index:" + str(ruleIndex))
+        else:
+            return pred(localctx, predIndex)
+
+    def term_sempred(self, localctx:TermContext, predIndex:int):
+            if predIndex == 0:
+                return self.precpred(self._ctx, 2)
+         
 
 
 

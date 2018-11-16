@@ -1,0 +1,6 @@
+Procedure main();
+        begin
+            n:=2;
+            while ((n<10) and (a>b)) do
+                n:=n*n;
+        end

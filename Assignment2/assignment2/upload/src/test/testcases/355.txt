@@ -1,0 +1,8 @@
+Procedure main();
+        begin
+            n:=2;
+            for foo:= 6 To foo < 10 do 
+                a := a*b+3+2*5-1;
+            while n<10 do
+                n:=n*n;
+        end

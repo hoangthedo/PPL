@@ -1,0 +1,7 @@
+
+        function main ():real;
+        var a:real;
+        begin
+        return a;
+        end
+        

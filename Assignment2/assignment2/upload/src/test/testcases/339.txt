@@ -1,0 +1,5 @@
+Procedure main();
+        begin
+            b:= (a < a) > d;
+            a:= n And 10 and b and 5;
+        end

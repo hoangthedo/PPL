@@ -1,0 +1,10 @@
+
+            procedure InsertElement(listElement:array[0 .. 10] of real;n: integer; k, X:real);
+                Var i :array [1 .. 4] of integer;
+                begin
+                //test case cuoi cung
+                For i:=N downto k+ 1 do
+                    A[i] := tiger(A[i-1]);
+                A[k] := floatt(X);
+                end
+        

@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[VarDecl(Id(m),IntType)],VoidType(),[VarDecl(Id(y),ArrayType(1,10,StringType))],[CallStmt(Id(putIntLn),[CallExpr(Id(sum),[Id(m),Id(b),Id(k)])])])])

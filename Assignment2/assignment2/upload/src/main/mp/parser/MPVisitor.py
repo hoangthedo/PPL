@@ -89,8 +89,8 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#assignlist.
-    def visitAssignlist(self, ctx:MPParser.AssignlistContext):
+    # Visit a parse tree produced by MPParser#assignvar.
+    def visitAssignvar(self, ctx:MPParser.AssignvarContext):
         return self.visitChildren(ctx)
 
 
@@ -101,16 +101,6 @@ class MPVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MPParser#indexexp.
     def visitIndexexp(self, ctx:MPParser.IndexexpContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#ifstmt.
-    def visitIfstmt(self, ctx:MPParser.IfstmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#ifbody.
-    def visitIfbody(self, ctx:MPParser.IfbodyContext):
         return self.visitChildren(ctx)
 
 
@@ -174,6 +164,11 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MPParser#callnosemi.
+    def visitCallnosemi(self, ctx:MPParser.CallnosemiContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MPParser#procdec.
     def visitProcdec(self, ctx:MPParser.ProcdecContext):
         return self.visitChildren(ctx)
@@ -181,11 +176,6 @@ class MPVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MPParser#expstmt.
     def visitExpstmt(self, ctx:MPParser.ExpstmtContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#exp.
-    def visitExp(self, ctx:MPParser.ExpContext):
         return self.visitChildren(ctx)
 
 
@@ -221,11 +211,6 @@ class MPVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MPParser#exp5.
     def visitExp5(self, ctx:MPParser.Exp5Context):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#exp6.
-    def visitExp6(self, ctx:MPParser.Exp6Context):
         return self.visitChildren(ctx)
 
 

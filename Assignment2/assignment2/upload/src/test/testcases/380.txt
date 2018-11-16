@@ -1,0 +1,8 @@
+procedure main();
+        var a : array[-1 .. 1] of string;
+        begin
+            while ((a<=10) and (b=true)) do
+            begin
+            end
+        end
+        

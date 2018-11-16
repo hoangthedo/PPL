@@ -1,0 +1,12 @@
+
+        function f(i:integer):real;
+        var a: real;
+            c: string;
+        begin
+            a:= c;
+            return a;
+        end
+        procedure main ();
+        begin
+        end
+        

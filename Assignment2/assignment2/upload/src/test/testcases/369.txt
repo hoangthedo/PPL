@@ -1,0 +1,10 @@
+function abc():real;
+        var a:integer;
+        begin
+            a:=5;
+            for a:= 0 to 3 do
+                with a,c:integer; do
+                    a:= b;
+            return put();
+            c:=b--5;
+        end

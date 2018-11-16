@@ -1,0 +1,27 @@
+
+        function f(i:integer;j:real):real;
+        var a: real;
+            b: integer;
+            c: string;
+        begin
+            return a;
+        end
+        procedure main ();
+        var a:integer;
+            b: boolean;
+            c:real;
+        begin
+            c :=f(1,8.2);
+            for a:= 0 to 12 do
+            begin
+                if b then begin
+                    b := a > 1;
+                end
+                else 
+                begin
+                    continue;
+                    b := true;
+                end
+            end
+        end
+        

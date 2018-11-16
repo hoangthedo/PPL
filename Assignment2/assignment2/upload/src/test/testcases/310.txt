@@ -1,0 +1,7 @@
+function foo (a:real; b:integer):INTEGER;
+        begin
+            while a > 0 do begin
+            end
+            while a >0 do begin
+            end
+        end

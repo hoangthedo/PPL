@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(p),IntLiteral(1)),For(Id(i)IntLiteral(1),Id(y),True,[AssignStmt(Id(p),BinaryOp(*,Id(p),Id(x)))]),AssignStmt(Id(power),Id(p))])])

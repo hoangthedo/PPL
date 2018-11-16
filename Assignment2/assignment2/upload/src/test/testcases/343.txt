@@ -1,0 +1,6 @@
+Procedure main();
+        begin
+            a:=b:=c:= (abc()+dfc())[1];
+            if a>b then
+             a:=5;
+        end

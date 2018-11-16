@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(proc),[],VoidType(),[],[AssignStmt(Id(a),BinaryOp(>,BinaryOp(+,Id(a),Id(b)),Id(c)))])])

@@ -1,0 +1,6 @@
+function foo (a:real; b:integer):INTEGER;
+        begin
+            for a:= 0 downto 10 do begin 
+            putIntLn(4);
+            end
+        end

@@ -1,0 +1,4 @@
+procedure main(m:integer);
+        begin
+            foo()[4] := 5 +as/2;
+        end

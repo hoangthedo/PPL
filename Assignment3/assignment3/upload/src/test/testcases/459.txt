@@ -1,0 +1,18 @@
+
+        function foo(k:integer):integer;
+        begin
+            return b;
+        end
+        function foo1(k:integer):integer;
+        begin
+            return foo(1);
+        end
+        var b: integer;
+            d: real;
+        procedure main ();
+        var a:integer;
+            b: boolean;
+        begin
+            
+        end
+        

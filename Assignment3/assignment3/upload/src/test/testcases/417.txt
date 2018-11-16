@@ -1,0 +1,18 @@
+
+        function foo(f:integer;h:real):real;
+        var a:integer;
+        begin
+        return h;
+        end
+        function f(i:integer):real;
+        var a: real;
+            b: integer;
+            c: string;
+        begin
+            a := b := foo(a);
+            return a;
+        end
+        procedure main ();
+        begin
+        end
+        

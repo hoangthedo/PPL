@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[],VoidType(),[],[If(BinaryOp(and,BinaryOp(>,IntLiteral(112),ArrayCell(Id(z),IntLiteral(3))),BinaryOp(>,IntLiteral(123),ArrayCell(Id(a),IntLiteral(9)))),[AssignStmt(ArrayCell(Id(a),IntLiteral(5)),Id(f))],[])]),FuncDecl(Id(foo),[],IntType,[],[])])

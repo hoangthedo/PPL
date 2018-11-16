@@ -1,0 +1,9 @@
+function s(a,b:integer):integer;
+        begin
+            return a+b;
+        end
+        Procedure main();
+        begin
+            putIntLn(s(1,2));
+        end
+        

@@ -1,0 +1,4 @@
+Procedure main();
+        begin
+            a:= a[b[1]] + foo();
+        end

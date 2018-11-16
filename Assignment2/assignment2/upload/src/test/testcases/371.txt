@@ -1,0 +1,4 @@
+Procedure main();
+        begin
+            result:= func1(a,b,c);
+        end

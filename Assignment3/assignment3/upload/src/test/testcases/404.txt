@@ -1,0 +1,5 @@
+
+        var a,b,c: integer;
+            a,b :real;
+        procedure main (); begin
+        end

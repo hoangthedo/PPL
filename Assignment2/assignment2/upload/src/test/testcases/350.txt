@@ -1,0 +1,24 @@
+procedure main(m:integer);
+        begin
+            if a>b then
+            begin
+                if a>3 then
+                    a:=3;
+                else
+                begin
+                    a:=3;
+                    with a,b:integer; do begin
+                        if a < b then
+                            while a < 4 do 
+                            begin
+                                if 3 < a then 
+                                    a:=5;
+                                else
+                                    a:=6;
+                            end
+                    end
+                end
+            end
+            else
+                b:=a;
+        end

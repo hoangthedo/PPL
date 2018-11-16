@@ -1,0 +1,9 @@
+procedure main();
+        begin 
+            while(a = 10) do
+                begin
+                    if (a<20) then 
+                        a := -func(pass);
+                end
+        end
+        

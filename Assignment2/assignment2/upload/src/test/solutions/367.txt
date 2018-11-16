@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[VarDecl(Id(m),IntType)],VoidType(),[VarDecl(Id(y),ArrayType(1,49,StringType))],[If(BinaryOp(>,Id(a),BinaryOp(*,Id(b),Id(m))),[If(BinaryOp(>,Id(a),BinaryOp(*,Id(b),Id(m))),[],[])],[]),While(BinaryOp(=,Id(s),Id(a)),[AssignStmt(Id(m),IntLiteral(2))])])])

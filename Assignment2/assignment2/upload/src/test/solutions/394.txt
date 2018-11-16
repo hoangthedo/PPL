@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(s),[VarDecl(Id(a),IntType),VarDecl(Id(b),IntType)],IntType,[],[Return(Some(BinaryOp(+,Id(a),Id(b))))]),FuncDecl(Id(main),[],VoidType(),[],[CallStmt(Id(putIntLn),[CallExpr(Id(s),[IntLiteral(1),IntLiteral(2)])])])])

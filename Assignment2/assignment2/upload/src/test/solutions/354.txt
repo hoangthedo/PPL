@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(n),IntLiteral(2)),While(BinaryOp(<,Id(n),IntLiteral(10)),[AssignStmt(Id(n),BinaryOp(*,Id(n),Id(n)))])])])

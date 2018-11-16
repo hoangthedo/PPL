@@ -1,0 +1,5 @@
+function foo (a:real; b:integer):INTEGER;
+        begin
+            b := True;
+            c := False;
+        end

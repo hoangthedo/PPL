@@ -1,0 +1,18 @@
+
+        function f():integer;
+        var x,y:integer;
+            k:real;
+        begin
+            x:= putInt(y);
+            return y;
+        end
+
+        var b: integer;
+            d: real;
+        procedure main ();
+        var a:integer;
+            b: boolean;
+        begin
+            a := d + f();
+        end
+        

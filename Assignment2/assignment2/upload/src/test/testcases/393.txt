@@ -1,0 +1,7 @@
+Function r(n:integer):boolean;
+        var i,d:integer;
+        begin
+            For i:=1 to n do
+                if d=2 then kt:=true;
+        end
+        

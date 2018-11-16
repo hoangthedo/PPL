@@ -1,0 +1,19 @@
+
+        function f(i:integer;j:real):integer;
+        var a: integer;
+            b: boolean;
+            c: string;
+            d:integer;
+        begin
+            with a,b: real;c:array [1 .. 2] of real; do
+               a := c[d] + b;
+               break;
+            return a;
+        end
+        procedure main ();
+        var a:integer;
+            b: boolean;
+        begin
+            d:=f(i,2.3);
+        end
+        

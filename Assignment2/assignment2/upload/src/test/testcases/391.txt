@@ -1,0 +1,7 @@
+procedure main();
+        begin
+            p:=1;
+            for i:=1 to y do p:=p*x;
+            power:=p;
+        end
+        

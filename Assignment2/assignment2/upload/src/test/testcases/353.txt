@@ -1,0 +1,5 @@
+procedure main(m:integer);
+        begin
+            with a,b:real; do
+            begin end
+        end

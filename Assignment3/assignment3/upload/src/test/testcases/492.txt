@@ -1,0 +1,18 @@
+
+        function f(i:integer;j:real): integer;
+        begin
+            while a > 0 do 
+            begin 
+                if a <0 then
+                begin
+                end
+            end
+            return 1;
+        end
+        procedure main ();
+        var a:integer;
+            b: boolean;
+        begin
+            a:= f(1,2.5);
+        end
+        

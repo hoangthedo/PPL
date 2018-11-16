@@ -1,0 +1,7 @@
+procedure main();
+        begin 
+            if (a>10) then
+                while (a<15) do
+                    s := s+1;
+        end
+        

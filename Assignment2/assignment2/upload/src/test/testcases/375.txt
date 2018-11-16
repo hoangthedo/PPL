@@ -1,0 +1,7 @@
+var i,d:integer;
+        Procedure main();
+        begin
+            For i:=1 to n do
+               if n mod i=0 then d := 0;
+            if d=2 then kt:=true;
+        end

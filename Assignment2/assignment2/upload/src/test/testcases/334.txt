@@ -1,0 +1,7 @@
+function foo(a:string): string;
+        var b: string;
+        begin
+            if (a > 4) and (b < 4) then
+            putIntLn(4);
+        end
+        

@@ -1,0 +1,1 @@
+Program([VarDecl(Id(p),FloatType),VarDecl(Id(i),IntType),FuncDecl(Id(power),[VarDecl(Id(x),FloatType),VarDecl(Id(y),IntType)],FloatType,[VarDecl(Id(p),FloatType),VarDecl(Id(i),IntType)],[])])

@@ -1,0 +1,5 @@
+procedure main(m:integer);
+        var y : array[1 .. 10] of string;
+        begin
+            putIntLn(sum(m,b,k));   
+        end

@@ -1,0 +1,10 @@
+
+        procedure k();
+        begin
+        end
+        procedure main ();
+        var a:integer;
+            b: boolean;
+        begin
+        end
+        

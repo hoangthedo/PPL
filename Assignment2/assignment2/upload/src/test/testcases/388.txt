@@ -1,0 +1,5 @@
+procedure main();
+        begin
+            if(a>=3) then a:=3;
+        end
+        

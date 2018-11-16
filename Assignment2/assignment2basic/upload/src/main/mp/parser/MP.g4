@@ -8,47 +8,17 @@ options{
 	language=Python3;
 }
 
-program  : decl+ EOF;
+prog: stmt+;
 
-decl: funcdecl | procdecl;
-
-procdecl: PROCEDURE ID LB RB SEMI body; 
-
-funcdecl: FUNCTION ID LB RB COLON mtype SEMI body;
-
-body: BEGIN stmt? END  ;
-
-stmt: funcall SEMI;
-
-funcall: ID LB exp? RB ;
-
-exp: INTLIT ;
-
-mtype: INTTYPE;
-
-INTLIT: [0-9]+ ;
-
-LB: '(' ;
-
-RB: ')' ;
-
-SEMI: ';' ;
-
-COLON: ':' ;
-
-WS : [ \t\r\n]+ -> skip ; // skip spaces, tabs, newlines
-
-PROCEDURE: P R O C E D U R E;
-
-FUNCTION: F U N C T I O N;
-
-BEGIN: B E G I N;
-
-END: E N D;
-
-INTTYPE: I N T E G E R;
-
-ID: [a-zA-Z]+ ;
+stmt: ID '=' exp ';';
+exp: term (ADDOP term)*;
+term: term MULOP fact|fact;
+fact: ID | INTLIT|FLOATLIT| '(' exp ')';
+INTLIT: [0-9]+;
+FLOATLIT: [0-9]+'.'[0-9]+;
+ADDOP: '+'|'-';
+MULOP: '*'|'/';
+ID:[a-z]+;
 
 fragment A : [aA];
 fragment B : [bB];

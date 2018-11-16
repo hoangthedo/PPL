@@ -1,0 +1,4 @@
+function foo (a:real; b:integer):INTEGER;
+        begin
+            a:=b:=c:=1;
+        end

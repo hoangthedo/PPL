@@ -1,0 +1,23 @@
+
+        function f(i:integer;j:real):array [1 .. 2] of integer;
+        var a: integer;
+            b: boolean;
+            c: integer;
+            d: array [1 .. 8] of integer;
+        begin
+            while a > 0 do 
+            begin 
+                if c = 0 then
+                begin
+                    d[1]:= 0;
+                end
+            end
+            return d;
+        end
+        procedure main ();
+        var a:integer;
+            b: boolean;
+        begin
+            a:=f(1,2.3)[0];
+        end
+        

@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[],VoidType(),[VarDecl(Id(i),IntType)],[AssignStmt(Id(s),IntLiteral(0)),For(Id(i)IntLiteral(1),IntLiteral(10),True,[AssignStmt(Id(s),BinaryOp(+,Id(s8),Id(i)))])])])

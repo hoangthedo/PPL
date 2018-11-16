@@ -1,0 +1,15 @@
+
+        function f(i:integer;j:real):real;
+        var a: real;
+            b: integer;
+            c: string;
+        begin
+            for b:=5 to 10.5 do begin end
+            return a;
+        end
+        procedure main ();
+        var b:real;
+        begin
+         b:=f(1,8.2);
+        end
+        

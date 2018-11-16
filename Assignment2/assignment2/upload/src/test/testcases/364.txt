@@ -1,0 +1,11 @@
+var a,b,c,d : boolean;
+        procedure main(); begin
+            
+        end
+        function foo(): integer; begin
+        end
+
+        function a(): integer; begin
+        end
+
+        var a: integer;

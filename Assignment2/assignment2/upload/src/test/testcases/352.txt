@@ -1,0 +1,5 @@
+procedure main(m:integer);
+        begin
+            while a >0 do
+            begin end
+        end

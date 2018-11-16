@@ -1,0 +1,7 @@
+procedure main();
+        Begin
+            b := a - b;
+            If b>c then
+                a := a - b;
+        End
+        

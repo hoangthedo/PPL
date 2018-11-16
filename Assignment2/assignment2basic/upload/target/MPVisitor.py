@@ -9,28 +9,8 @@ else:
 
 class MPVisitor(ParseTreeVisitor):
 
-    # Visit a parse tree produced by MPParser#program.
-    def visitProgram(self, ctx:MPParser.ProgramContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#decl.
-    def visitDecl(self, ctx:MPParser.DeclContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#procdecl.
-    def visitProcdecl(self, ctx:MPParser.ProcdeclContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#funcdecl.
-    def visitFuncdecl(self, ctx:MPParser.FuncdeclContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MPParser#body.
-    def visitBody(self, ctx:MPParser.BodyContext):
+    # Visit a parse tree produced by MPParser#prog.
+    def visitProg(self, ctx:MPParser.ProgContext):
         return self.visitChildren(ctx)
 
 
@@ -39,18 +19,18 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#funcall.
-    def visitFuncall(self, ctx:MPParser.FuncallContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MPParser#exp.
     def visitExp(self, ctx:MPParser.ExpContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#mtype.
-    def visitMtype(self, ctx:MPParser.MtypeContext):
+    # Visit a parse tree produced by MPParser#term.
+    def visitTerm(self, ctx:MPParser.TermContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MPParser#fact.
+    def visitFact(self, ctx:MPParser.FactContext):
         return self.visitChildren(ctx)
 
 

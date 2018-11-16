@@ -1,0 +1,10 @@
+procedure proc();
+        begin
+            if a > 3 then
+            begin
+                if a < 7 then 
+                    b := b + 2;
+                else 
+                    b := 123;
+            end
+        end

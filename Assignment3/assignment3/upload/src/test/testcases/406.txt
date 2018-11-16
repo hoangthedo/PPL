@@ -1,0 +1,8 @@
+
+        var a,b,c: integer;
+        procedure main ();
+        begin
+        end
+        procedure b(f:integer);
+        begin
+        end

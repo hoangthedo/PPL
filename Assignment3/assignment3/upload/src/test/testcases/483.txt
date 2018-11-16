@@ -1,0 +1,15 @@
+
+        function f():array [1 .. 3] of real;
+        var x,y:integer;
+        begin
+            return d;
+        end
+        procedure main ();
+        var x:real;
+        begin
+            x:=f()[3];
+            return x;
+        end
+        var x,y,z:integer;
+            d: array [1 .. 3] of integer;
+        

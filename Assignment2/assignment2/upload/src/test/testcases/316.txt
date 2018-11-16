@@ -1,0 +1,9 @@
+function foo (a:real; b:integer):INTEGER;
+        begin
+            if a > 0 then begin
+                while a > 0 do begin
+                    putIntLn(4);
+                    putIntLn(4);
+                end
+            end
+        end

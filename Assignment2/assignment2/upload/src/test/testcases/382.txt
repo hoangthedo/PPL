@@ -1,0 +1,5 @@
+function main ():string;
+        begin
+            test := 6 and then 3;
+        end
+        

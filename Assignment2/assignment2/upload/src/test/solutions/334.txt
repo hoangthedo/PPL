@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(foo),[VarDecl(Id(a),StringType)],StringType,[VarDecl(Id(b),StringType)],[If(BinaryOp(and,BinaryOp(>,Id(a),IntLiteral(4)),BinaryOp(<,Id(b),IntLiteral(4))),[CallStmt(Id(putIntLn),[IntLiteral(4)])],[])])])

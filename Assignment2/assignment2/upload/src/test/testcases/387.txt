@@ -1,0 +1,7 @@
+procedure main();
+        begin
+            if(a>3) then 
+                if(a<4) then
+                    a := a+1;
+        end
+        

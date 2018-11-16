@@ -1,0 +1,5 @@
+function foo (a:real; b:integer):INTEGER;
+        var a:real;
+        begin
+            putIntLn(4);
+        end

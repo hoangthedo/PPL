@@ -1,0 +1,16 @@
+
+        procedure foo(f:integer);
+        var a:integer;
+        begin
+        end
+        function f(i:integer):real;
+        var a: real;
+        begin
+        return a;
+        end
+        function main ():real;
+        var a:real;
+        begin
+        return a;
+        end
+        
